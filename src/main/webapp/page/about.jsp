@@ -29,7 +29,7 @@
           <br>
 						<h3 style="color: #000;font-size: 15px;">关于站长</h3>
 						<br>
-						<p>罗廷方，男，一个95后站长，四川人。</p>
+						<p>陈松，男，一个95后站长，四川人。</p>
             <p>建站时间：2018.03-2018.06。</p>
 						<p>15年09月至18年4月一直潜心研究Java，一边读书一边学习Java，完成该作品时、大三。</p>
 						<br>
@@ -46,7 +46,7 @@
 						<p>服务器：阿里云服务器</p>
 						<p>备案号：蜀ICP备18001827号-1</p>
 						<p>程序：Java</p>
-						<a target= "_blank" href="http://www.luotf.com/find/13015.html"><span style="color: #12aae8;font-size: 13px;">查看更多</span></a>
+						<a target= "_blank" href="http://localhost:8080/find/13015.html"><span style="color: #12aae8;font-size: 13px;">查看更多</span></a>
 					<br>
           <br>
           </div>
@@ -60,16 +60,16 @@
 					<img src="${pageContext.request.contextPath}/images/my.jpeg">
 				</div>
 				<div class="ab_con animated fadeIn">
-					<p>网名：我倾尽一生,囚你无期 | Luotf</p>
-					<p>职业：Java开发工程师 | 全栈</p>
-					<p>籍贯：四川省—成都市</p>
-					<p>邮箱：849673404@qq.com</p>
+                    <p>网名：你尽管try,我都catch | csblog</p>
+                    <p>职业：男程序员，Java研发工程师</p>
+                    <p>家乡：江西省-抚州市</p>
+                    <p>Email：2822739876@qq.com</p>
 				</div>
 			</div>
 			<div class="weixin animated fadeIn whitebg">
 				<h2 class="htitle">公众号</h2>
 				<ul>
-					<img src="${pageContext.request.contextPath}/images/wx.jpg">
+					<img src="${pageContext.request.contextPath}/images/my_vx.jpg">
 				</ul>
 			</div>
 		</div>

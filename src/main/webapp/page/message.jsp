@@ -21,7 +21,7 @@
         </h2>
 				<div style="width:90%;margin: 0 auto;">
 				<!--PC和WAP自适应版-->
-				  <div  id="SOHUCS" sid="849673404@qq.com"></div>
+				  <div  id="SOHUCS" sid="2822739876@qq.com"></div>
 				</div>
 			</div>
 			<a class="top animated fadeIn" onclick="window.scrollTo(0,0)" style="display:none;z-index:0;font-size: 24px;position: fixed;bottom: 5%;right: 30%;color:#fff"><span style="padding: 6.5px 12px;background-color: #fff;color: #999;"><i class="fa fa-angle-up"></i></span></a>

@@ -81,8 +81,6 @@
         <div class="newstab">
           
         </div>
-
-
       </div>
 
       <div class="zhuanti whitebg">
@@ -91,11 +89,11 @@
 
         </ul>
       </div>
-      <div class="ad whitebg">
+     <%-- <div class="ad whitebg">
         <a href="#" target="_blank"> <img
           src="${pageContext.request.contextPath}/images/longad2.png">
         </a>
-      </div>
+      </div>--%>
 
       <div class="newblogs bloglist whitebg animated fadeIn"
         style="display:none;animation-delay:0.3s">
@@ -126,7 +124,7 @@
             href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=-MTIxcrLz8jMyLyNjdKfk5E"
             target="_blank" class="iconfont icon-youxiang" title="我的邮箱"></a></li>
           <li><a
-            href="http://wpa.qq.com/msgrd?v=3&uin=849673404&site=qq&menu=yes"
+            href="http://wpa.qq.com/msgrd?v=3&uin=2822739876&site=qq&menu=yes"
             target="_blank" class="iconfont icon---" title="QQ联系我"></a></li>
           <li id="weixin"><a href="#" target="_blank"
             class="iconfont icon-weixin" title="关注我的微信"></a><i><img
@@ -146,14 +144,6 @@
         <h2 class="htitle">点击排行</h2>
         <ul class="">
 
-        </ul>
-      </div>
-      <div class="git whitebg links animated fadeIn"
-        style="display:none;animation-delay:0.3s">
-        <h2 class="htitle">开源地址</h2>
-        <ul class="animated fadeIn">
-          <li><a href="https://gitee.com/luotf/Art_Blog" target="_blank">Gitee&nbsp;&nbsp;</a></li>
-          <li><a href="https://github.com/luotf/Art_Blog" target="_blank">Github</a></li>
         </ul>
       </div>
       <div class="weixin whitebg animated fadeIn"

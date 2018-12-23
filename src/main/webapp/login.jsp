@@ -56,7 +56,7 @@
 					</ul>
 					<div class=" tooltip-demo ">
 						<strong>还没有账号？ <a href="#" style="color:#3c3a39"
-							data-toggle="tooltip" data-placement="top" title="QQ:849673404">联系站长&raquo;</a>
+							data-toggle="tooltip" data-placement="top" title="QQ:2822739876">联系站长&raquo;</a>
 							<a href="${pageContext.request.contextPath}/index.jsp"
 							style="color:#3c3a39;margin-left:15px;">首页&raquo;</a></strong>
 

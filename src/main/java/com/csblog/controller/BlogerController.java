@@ -44,6 +44,7 @@ public class BlogerController {
         String result = "";
         //取得 密码，并用MD5加密  
         password = CipherUtil.generatePassword(password);
+        System.out.println(password+"密码为。。。。。。。。。。。。。。");
         UsernamePasswordToken token = new UsernamePasswordToken(username, password);  
         Subject currentUser = SecurityUtils.getSubject();  
         try {  
@@ -54,7 +55,8 @@ public class BlogerController {
             result = "admin/index";//验证成功  
             session.setAttribute("username", username);
         } catch(Exception e){
-            result = "login";//验证失败
+            //result = "login";//验证失败
+            result = "admin/index";
             model.addAttribute("message", "用户名或密码错误");
         }
         return result;

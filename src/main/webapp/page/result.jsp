@@ -95,13 +95,13 @@
         <h2 class="cloud_hometitle">来波关注</h2>
         <ul>
           <li class="qq"><a href="javascript:void(0)"
-            target="_blank"><span>QQ号</span>849673404</a></li>
+            target="_blank"><span>QQ号</span>2822739876</a></li>
           <li class="email"><a href="javascript:void(0)"
-            target="_blank"><span>邮箱帐号</span>849673404@qq.com</a></li>
+            target="_blank"><span>邮箱帐号</span>2822739876@qq.com</a></li>
           <li class="wxgzh"><a href="javascript:void(0)"
-            target="_blank"><span>微信号</span>luo849673404</a></li>
+            target="_blank"><span>微信号</span>cs-fighting-WN</a></li>
           <li class="wx" style="border:none"><img
-            src="${pageContext.request.contextPath}/images/wx.jpg"></li>
+            src="${pageContext.request.contextPath}/images/my_qq.jpg"></li>
         </ul>
       </div>
     </div>
