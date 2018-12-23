@@ -46,7 +46,7 @@ ul, li {
 /*默认链接颜色 */
 a {
   text-decoration: none;
-  color: #333
+  color: black;
 }
 
 .clear {
@@ -68,7 +68,7 @@ a {
 .mt20 { margin-top: 20px; }
 .font16{font-size:16px;}
 .blue { color: #00C1DE }
-header { width: 100%; padding: 5px 0; background: #1C2327; height: 50px; }
+header { width: 100%; padding: 5px 0; background: white; height: 50px; }
 header::before { background: #000 linear-gradient(to left, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55); content: ""; height: 5px; position: absolute; top: 0; width: 100%; }
 .logo { float: left; margin-right: 60px; line-height: 56px; color: #FFF; font-size: 22px }
 .logo a { color: #FFF }
@@ -80,13 +80,16 @@ header::before { background: #000 linear-gradient(to left, #4cd964, #5ac8fa, #00
 nav { float: left; height: 50px; line-height: 50px; text-align: center;    margin-top: 3px; }
 #starlist { }
 #starlist li { position: relative; display: inline; float: left; width: max-content; }
-#starlist li a { display: inline; float: left; padding: 0 16px; color: #fff }
-#starlist li a:hover, #starlist #selected, .selected > a, #starlist li:hover { color: #00c1de; }
-#starlist li:hover a { color: #00c1de }
-#starlist ul.sub { overflow: hidden; position: absolute; left: 0; top: 50px; background: #1C2327; display: none; z-index: 9 }
+#starlist li a { display: inline; float: left; padding: 0 16px; color: black }
+
+#starlist li a:hover, #starlist #selected, .selected > a, #starlist li:hover { color: white; }
+#starlist > li:hover { color: black; background-color: #3690cf }
+.li-selected{color: black; background-color: #3690cf}
+#starlist li:hover a { color: white }
+#starlist ul.sub { overflow: hidden; position: absolute; left: 0; top: 50px; background: white; display: none; z-index: 9 }
 #starlist ul.sub li { height: 30px; line-height: 30px; font-size: 14px; }
 #starlist ul.sub li:last-child { padding-bottom: 10px }
-#starlist ul.sub li a { color: #FFF }
+#starlist ul.sub li a { color: black }
 #starlist ul.sub li a:hover { color: #00c1de }
 #starlist li:hover ul.sub { display: block }
 /*箭头*/
@@ -600,7 +603,7 @@ footer a {
   -moz-osx-font-smoothing: grayscale;
 }
 .logo { float: left; margin-right: 60px; line-height: 56px; color: #FFF; font-size: 22px }
-.logo a { color: #FFF }
+.logo a { color: black }
 .logo img { margin-top: 14px; }
 .imgscale img {width: 100%;-moz-transition: all .5s ease;-webkit-transition: all .5s ease;-ms-transition: all .5s ease;-o-transition: all .5s ease;transition: all .5s ease;transition: all 0.5s;}
 .imgscale:hover img { transform: scale(1.1); }

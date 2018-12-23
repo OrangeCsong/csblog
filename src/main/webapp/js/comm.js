@@ -7,7 +7,8 @@ $(document).ready(function () {
     for(i=1;i<As.length;i++){if(window.location.href.indexOf(As[i].href)>=0)
     obj=As[i];}
     obj.id='selected';
-   
+
+    $("#selected").parent().addClass('li-selected');
      //nav
   $("#mnavh").click(function(){
     $("#starlist").toggle();
