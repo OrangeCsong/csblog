@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="baidu-site-verification" content="Eg9tVrHSEK" />
-<title>首页_个人博客 - 一个在Java道路上的技术员个人博客网站</title>
+<title>首页:一个在Java道路上的爬行的码农</title>
 <link rel="shortcut icon"
   href="${pageContext.request.contextPath}/images/favicon.ico">
-<meta name="keywords" content="个人博客,罗廷方个人博客,罗廷方" />
-<meta name="description" content="罗廷方个人博客，是一个在Java道路上的技术员个人博客网站" />
+<meta name="keywords" content="个人博客,陈松个人博客,陈松" />
+<meta name="description" content="陈松个人博客，是一个在Java道路上的爬行的码农" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="${pageContext.request.contextPath}/css/animate.css"
   rel="stylesheet">
@@ -29,14 +29,6 @@
   style="background:url(${pageContext.request.contextPath}/images/bj.png) repeat top left scroll;z-index:-2">
   <%@ include file="top.jsp"%>
   <article style="opacity:0">
-    <!-- <div class="pics ">
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div> -->
-
     <div class="lbox ">
       <div class="banbox">
         <div class="banner">
@@ -123,12 +115,12 @@
     <div class="rbox">
       <div class="card">
         <h2>名片</h2>
-        <p>网名：我倾尽一生,囚你无期 | Luotf</p>
+        <p>网名：你尽管try,我都catch | csblog</p>
         <p>职业：男程序员，Java研发工程师</p>
-        <p>现居：四川省-成都市</p>
-        <p>Email：849673404@qq.com</p>
+        <p>家乡：江西省-抚州市</p>
+        <p>Email：2822739876@qq.com</p>
         <ul class="linkmore">
-          <li><a href="http://www.luotf.com" target="_blank"
+          <li><a href="http://www.baidu.com" target="_blank"
             class="iconfont icon-zhuye" title="网站地址"></a></li>
           <li><a
             href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=-MTIxcrLz8jMyLyNjdKfk5E"
@@ -138,7 +130,7 @@
             target="_blank" class="iconfont icon---" title="QQ联系我"></a></li>
           <li id="weixin"><a href="#" target="_blank"
             class="iconfont icon-weixin" title="关注我的微信"></a><i><img
-              src="${pageContext.request.contextPath}/images/my_vx.png"></i></li>
+              src="${pageContext.request.contextPath}/images/my_vx.jpg"></i></li>
         </ul>
       </div>
 
@@ -188,13 +180,13 @@
         <h2 class="cloud_hometitle">来波关注</h2>
         <ul>
           <li class="qq"><a href="javascript:void(0)"
-            target="_blank"><span>QQ号</span>849673404</a></li>
+            target="_blank"><span>QQ号</span>2822739876</a></li>
           <li class="email"><a href="javascript:void(0)"
-            target="_blank"><span>邮箱帐号</span>849673404@qq.com</a></li>
+            target="_blank"><span>邮箱帐号</span>orangecsong@163.com</a></li>
           <li class="wxgzh"><a href="javascript:void(0)"
-            target="_blank"><span>微信号</span>luo849673404</a></li>
+            target="_blank"><span>微信号</span>cs-fighting-WN</a></li>
           <li class="wx" style="border:none"><img
-            src="${pageContext.request.contextPath}/images/wx.jpg"></li>
+            src="${pageContext.request.contextPath}/images/my_qq.jpg"></li>
         </ul>
       </div>
     </div>
