@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.csblog.mapper.ResourceMapper">
   <cache /> 
-  <resultMap id="BaseResultMap" type="com.csblog.model.RResource">
+  <resultMap id="BaseResultMap" type="com.csblog.model.ResourceManager">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="content" jdbcType="VARCHAR" property="content" />
@@ -50,7 +50,7 @@
     delete from t_resource
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.csblog.model.RResource">
+  <insert id="insert" parameterType="com.csblog.model.ResourceManager">
     insert into t_resource (id, title, content, 
       link, password, addTime, 
       status)
@@ -58,7 +58,7 @@
       #{link,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{addtime,jdbcType=TIMESTAMP}, 
       1)
   </insert>
-  <insert id="insertSelective" parameterType="com.csblog.model.RResource">
+  <insert id="insertSelective" parameterType="com.csblog.model.ResourceManager">
     insert into t_resource
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -107,7 +107,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.csblog.model.RResource">
+  <update id="updateByPrimaryKeySelective" parameterType="com.csblog.model.ResourceManager">
     update t_resource
     <set>
       <if test="title != null">
@@ -131,7 +131,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.csblog.model.RResource">
+  <update id="updateByPrimaryKey" parameterType="com.csblog.model.ResourceManager">
     update t_resource
     set title = #{title,jdbcType=VARCHAR},
       content = #{content,jdbcType=VARCHAR},

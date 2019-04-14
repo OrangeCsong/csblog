@@ -1,6 +1,6 @@
 package com.csblog.service;
 
-import com.csblog.model.RResource;
+import com.csblog.model.ResourceManager;
 
 import java.util.List;
 import java.util.Map;
@@ -10,22 +10,22 @@ public interface ResourceService {
 
 	    int deleteByPrimaryKey(Integer id);
 	    
-	    int insert(RResource record);
+	    int insert(ResourceManager record);
 
-	    int insertSelective(RResource record);
+	    int insertSelective(ResourceManager record);
 
-	    RResource selectByPrimaryKey(Integer id);
+          ResourceManager selectByPrimaryKey(Integer id);
 
 	    /**
 	     * 模糊查询
 	     * @param map
 	     * @return
 	     */
-	    List<RResource> selectLikeResourceListByPage(Map<String, Object> map);
+	    List<ResourceManager> selectLikeResourceListByPage(Map<String, Object> map);
 	    
 	    
 	    List<?>  selectResourceListByStatus();
-	    int updateByPrimaryKeySelective(RResource record);
+	    int updateByPrimaryKeySelective(ResourceManager record);
 	    
-	    int updateByPrimaryKey(RResource record);
+	    int updateByPrimaryKey(ResourceManager record);
 }

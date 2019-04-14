@@ -209,9 +209,6 @@ public class BlogController {
 	 
 	 /**
       * 模糊组合分页查询博客信息(and)
-      * @param id
-      * @return
-      * @throws Exception
       */
      @RequestMapping(value = "/selectBlogByAllType")
      @ResponseBody

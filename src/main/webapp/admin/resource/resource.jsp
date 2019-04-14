@@ -106,7 +106,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="col-sm-9">
 				<div class="ibox float-e-margins">
 					<div class="mail-box-header">
-						<h2>资源信息</h2>
+						<h2>资源列表</h2>
 
 						<table id="allResource" data-mobile-responsive="true">
 

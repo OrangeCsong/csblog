@@ -37,7 +37,6 @@ public class LinksControllerAdmin {
 	
 	/**
 	  * 实现添加友链功能
-	  * @param resource
 	  * @return
 	  * @throws Exception
 	  */
@@ -58,7 +57,6 @@ public class LinksControllerAdmin {
 	 
 	 /**
 	  * 更新友链功能
-	  * @param resource
 	  * @return
 	  * @throws Exception
 	  */
@@ -89,11 +87,6 @@ public class LinksControllerAdmin {
 		 Map<String, Object> map=new HashMap<String, Object>();
 		 String username = (String) session.getAttribute("username");
 		    Bloger bloger = blogerService.findUserByLoginName(username);
-		    if (bloger.getHasPermission() == 0) {
-		      map.put("status", 0);
-		      map.put("msg", "没有删除权限");
-		      return map;
-		    }
 		 if(linksService.deleteByPrimaryKey(id)!=0){
 			 map.put("status", 200);
 		 }else{
@@ -149,7 +142,6 @@ public class LinksControllerAdmin {
 	 
 	 /**
 	  * 模糊组合分页查询友链信息
-	  * @param id，resource
 	  * @return 管理端
 	  * @throws Exception
 	  */

@@ -17,9 +17,6 @@ public class subStringUtil {
 		int strEndIndex = content.length();
 		String s="";
 		String[] result=new String[]{"",""};
-		/* 开始截取 */
-		/*System.out.println("strStartIndex:"+strStartIndex);
-		System.out.println("strEndIndex:"+strEndIndex);*/
 		if(strStartIndex>0){
 			s = str.substring(strStartIndex, strEndIndex).substring(
 					strStart.length());

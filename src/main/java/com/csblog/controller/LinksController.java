@@ -49,7 +49,6 @@ public class LinksController {
 	 
 	 /**
 	  * 实现申请友链功能
-	  * @param resource
 	  * @return
 	  * @throws Exception
 	  */

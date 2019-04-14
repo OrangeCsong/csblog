@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.csblog.mapper.ResourceMapper;
-import com.csblog.model.RResource;
+import com.csblog.model.ResourceManager;
 import com.csblog.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ResourceServiceImpl implements ResourceService {
+
 	@Autowired
 	private ResourceMapper resourceMapper;
 	
@@ -23,37 +24,37 @@ public class ResourceServiceImpl implements ResourceService {
 	}
 
 	@Override
-	public int insert(RResource record) {
+	public int insert(ResourceManager record) {
 		// TODO Auto-generated method stub
 		return resourceMapper.insert(record);
 	}
 
 	@Override
-	public int insertSelective(RResource record) {
+	public int insertSelective(ResourceManager record) {
 		// TODO Auto-generated method stub
 		return resourceMapper.insertSelective(record);
 	}
 
 	@Override
-	public RResource selectByPrimaryKey(Integer id) {
+	public ResourceManager selectByPrimaryKey(Integer id) {
 		// TODO Auto-generated method stub
 		return resourceMapper.selectByPrimaryKey(id);
 	}
 
 	@Override
-	public List<RResource> selectLikeResourceListByPage(Map<String, Object> map) {
+	public List<ResourceManager> selectLikeResourceListByPage(Map<String, Object> map) {
 		// TODO Auto-generated method stub
 		return resourceMapper.selectLikeResourceListByPage(map);
 	}
 
 	@Override
-	public int updateByPrimaryKeySelective(RResource record) {
+	public int updateByPrimaryKeySelective(ResourceManager record) {
 		// TODO Auto-generated method stub
 		return resourceMapper.updateByPrimaryKeySelective(record);
 	}
 
 	@Override
-	public int updateByPrimaryKey(RResource record) {
+	public int updateByPrimaryKey(ResourceManager record) {
 		// TODO Auto-generated method stub
 		return resourceMapper.updateByPrimaryKey(record);
 	}

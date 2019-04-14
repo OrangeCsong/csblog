@@ -68,11 +68,7 @@ public class BlogTypeControllerAdmin {
     Map<String, Object> map = new HashMap<String, Object>();
     String username = (String) session.getAttribute("username");
     Bloger bloger = blogerService.findUserByLoginName(username);
-    if (bloger.getHasPermission() == 0) {
-      map.put("status", 0);
-      map.put("msg", "没有删除权限");
-      return map;
-    }
+
     // 查询该类别下是否有博客
     if (blogTypeService.selectBlogTypeById(blogType.getId()).getNum() != 0) {
       // 该类别下有博客  不能删除
@@ -109,7 +105,6 @@ public class BlogTypeControllerAdmin {
   /**
    * 按照不同条件分页查询博客类别信息
    *
-   * @param id
    * @return
    * @throws Exception
    */
@@ -147,7 +142,6 @@ public class BlogTypeControllerAdmin {
   /**
    * 更新博客类别功能
    *
-   * @param blog
    * @return
    * @throws Exception
    */
@@ -159,11 +153,6 @@ public class BlogTypeControllerAdmin {
     Map<String, Object> map = new HashMap<String, Object>();
     String username = (String) session.getAttribute("username");
     Bloger bloger = blogerService.findUserByLoginName(username);
-    if (bloger.getHasPermission() == 0) {
-      map.put("status", 0);
-      map.put("msg", "没有更新权限");
-      return map;
-    }
 
     if (blogTypeService.selectBlogTypeByName(blogType.getTypename()) != null) {
       // 已经存在该类别

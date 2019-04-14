@@ -9,9 +9,6 @@ import com.csblog.annotation.SystemLog;
 import com.csblog.service.BlogerService;
 import com.csblog.util.CipherUtil;
 import com.csblog.util.ConstantUtil;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,39 +24,22 @@ public class BlogerController {
      * @param request 
      * @return 
      */  
-    @RequestMapping("/login")  
+    @RequestMapping("/login")
     public String tologin(HttpServletRequest request, HttpServletResponse response, Model model){  
-    	
-    	return "login";  
+    	return "login";
     }  
       
     /** 
      * 验证用户名和密码 
-     * @param request 
-     * @return 
+     * @return
      */  
     @RequestMapping("/checkLogin")
-    @SystemLog(description = ConstantUtil.LOGIN_IN,userType=ConstantUtil.USERTYPE_ADMIN)
     public String login(String username, HttpSession session, String password, Model model){
-        String result = "";
-        //取得 密码，并用MD5加密  
+
+        //取得 密码，并用MD5加密
         password = CipherUtil.generatePassword(password);
         System.out.println(password+"密码为。。。。。。。。。。。。。。");
-        UsernamePasswordToken token = new UsernamePasswordToken(username, password);  
-        Subject currentUser = SecurityUtils.getSubject();  
-        try {  
-            if (!currentUser.isAuthenticated()){//使用shiro来验证  
-                token.setRememberMe(true);  //记住密码
-                currentUser.login(token);//验证角色和权限  
-            }
-            result = "admin/index";//验证成功  
-            session.setAttribute("username", username);
-        } catch(Exception e){
-            //result = "login";//验证失败
-            result = "admin/index";
-            model.addAttribute("message", "用户名或密码错误");
-        }
-        return result;
+        return "admin/index";
     }
     
     /** 
@@ -69,9 +49,6 @@ public class BlogerController {
     @RequestMapping(value = "/admin/logout")  
     @SystemLog(description = ConstantUtil.LOGIN_OUT,userType=ConstantUtil.USERTYPE_ADMIN) 
     public String logout() {    
-        Subject currentUser = SecurityUtils.getSubject();    
-        String result = "login";    
-        currentUser.logout();    
-        return result;    
+        return "login";
     } 
 }

@@ -7,7 +7,7 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import com.csblog.annotation.SystemLog;
-import com.csblog.model.RResource;
+import com.csblog.model.ResourceManager;
 import com.csblog.service.ResourceService;
 import com.csblog.util.ConstantUtil;
 import org.springframework.stereotype.Controller;
@@ -36,7 +36,7 @@ public class ResourceController {
 	 @RequestMapping(value = "/selectLikeResourceListByPage",method=RequestMethod.GET)
 	 @ResponseBody
 	 @SystemLog(description = ConstantUtil.RESOURCE_FINDKEY,userType=ConstantUtil.USERTYPE_USER)
-	 public Map<String, Object> selectLikeResourceListByPage(String prarm, RResource resource, @RequestParam(value="page", required=true,defaultValue="1") Integer page, @RequestParam(value="pageSize", required=true,defaultValue="9") Integer pageSize) throws Exception{
+	 public Map<String, Object> selectLikeResourceListByPage(String prarm, ResourceManager resource, @RequestParam(value="page", required=true,defaultValue="1") Integer page, @RequestParam(value="pageSize", required=true,defaultValue="9") Integer pageSize) throws Exception{
 		 Map<String, Object> map=new HashMap<String, Object>();
 		 if(resource.getTitle()!=null&&resource.getTitle()!=""){
 			 map.put("title", resource.getTitle());
@@ -49,8 +49,8 @@ public class ResourceController {
 		 }
 		 //分页显示：第1页开始，每页显示9条记录
 		 PageHelper.startPage(page, pageSize);
-		 List<RResource> resourceList=resourceService.selectLikeResourceListByPage(map);
-		 PageInfo<RResource> pageInfo=new PageInfo<RResource>(resourceList);
+		 List<ResourceManager> resourceList=resourceService.selectLikeResourceListByPage(map);
+		 PageInfo<ResourceManager> pageInfo=new PageInfo<ResourceManager>(resourceList);
 		 Map<String, Object> returnMap=new HashMap<String, Object>();
 		 if(resourceList.size()>0){
 			 returnMap.put("status", 200);

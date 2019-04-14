@@ -1,6 +1,6 @@
 package com.csblog.mapper;
 
-import com.csblog.model.RResource;
+import com.csblog.model.ResourceManager;
 
 import java.util.List;
 import java.util.Map;
@@ -10,18 +10,18 @@ public interface ResourceMapper {
 	
     int deleteByPrimaryKey(Integer id);
     
-    int insert(RResource record);
+    int insert(ResourceManager record);
 
-    int insertSelective(RResource record);
+    int insertSelective(ResourceManager record);
 
-    RResource selectByPrimaryKey(Integer id);
+    ResourceManager selectByPrimaryKey(Integer id);
 
     /**
      * 模糊查询
      * @param map
      * @return
      */
-    List<RResource> selectLikeResourceListByPage(Map<String, Object> map);
+    List<ResourceManager> selectLikeResourceListByPage(Map<String, Object> map);
     
     /**
  	 *  获取资源信息，根据状态分组查询
@@ -29,7 +29,7 @@ public interface ResourceMapper {
  	 */
  	List<?>  selectResourceListByStatus();
     
-    int updateByPrimaryKeySelective(RResource record);
+    int updateByPrimaryKeySelective(ResourceManager record);
     
-    int updateByPrimaryKey(RResource record);
+    int updateByPrimaryKey(ResourceManager record);
 }

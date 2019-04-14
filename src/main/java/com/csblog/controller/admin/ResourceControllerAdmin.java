@@ -8,12 +8,9 @@ import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
-import com.csblog.annotation.SystemLog;
-import com.csblog.model.Bloger;
-import com.csblog.model.RResource;
+import com.csblog.model.ResourceManager;
 import com.csblog.service.BlogerService;
 import com.csblog.service.ResourceService;
-import com.csblog.util.ConstantUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -33,8 +30,8 @@ public class ResourceControllerAdmin {
 	private ResourceService resourceService;
 	@Resource(name = "blogerServiceImpl")
 	private BlogerService blogerService;
-	
-	
+
+
 	/**
 	  * 实现添加资源功能
 	  * @param resource
@@ -43,8 +40,7 @@ public class ResourceControllerAdmin {
 	  */
 	 @RequestMapping(value = "/addResource",method = RequestMethod.POST)
 	 @ResponseBody
-	 @SystemLog(description = ConstantUtil.RESOURCE_ADD,userType=ConstantUtil.USERTYPE_ADMIN)
-	 public Map<String, Object> addResource(String prarm, RResource resource) throws Exception{
+	 public Map<String, Object> addResource(String prarm, ResourceManager resource) throws Exception{
 		 Map<String, Object> map=new HashMap<String, Object>();
 		 resource.setAddtime(new Date());
 		 if(resourceService.insert(resource)!=0){
@@ -64,17 +60,8 @@ public class ResourceControllerAdmin {
 	  */
 	 @RequestMapping(value = "/updateResource",method = RequestMethod.POST)
 	 @ResponseBody
-	 @SystemLog(description = ConstantUtil.RESOURCE_UPDATE,userType=ConstantUtil.USERTYPE_ADMIN) 
-	 public Map<String, Object> updateResource(String prarm,HttpSession session,RResource resource) throws Exception{
+	 public Map<String, Object> updateResource(String prarm, HttpSession session, ResourceManager resource) throws Exception{
 		 Map<String, Object> map=new HashMap<String, Object>();
-		 String username = (String) session.getAttribute("username");
-		    Bloger bloger = blogerService.findUserByLoginName(username);
-		    if (bloger.getHasPermission() == 0) {
-		      map.put("status", 0);
-		      map.put("msg", "没有删除权限");
-		      return map;
-		    }
-		 
 		 if(resourceService.updateByPrimaryKeySelective(resource)!=0){
 			 map.put("status", 200);
 		 }else{
@@ -92,20 +79,11 @@ public class ResourceControllerAdmin {
 	  */
 	 @RequestMapping(value = "/deleteResource",method = RequestMethod.POST)
 	 @ResponseBody
-	 @SystemLog(description = ConstantUtil.RESOURCE_DELETE,userType=ConstantUtil.USERTYPE_ADMIN) 
 	 public Map<String, Object> deleteResource(String prarm, HttpSession session,Integer id) throws Exception{
 		 Map<String, Object> map=new HashMap<String, Object>();
-		 String username = (String) session.getAttribute("username");
-		    Bloger bloger = blogerService.findUserByLoginName(username);
-		    if (bloger.getHasPermission() == 0) {
-		      map.put("status", 0);
-		      map.put("msg", "没有删除权限");
-		      return map;
-		    }
 		 if(resourceService.deleteByPrimaryKey(id)!=0){
 			 map.put("status", 200);
 		 }else{
-			 //0表示：删除失败
 			 map.put("status", 0);
 		 }
 		 return map;
@@ -121,7 +99,7 @@ public class ResourceControllerAdmin {
 	 @ResponseBody
 	 public Map<String, Object> selectResourceById(Integer id) throws Exception{
 		 Map<String, Object> map=new HashMap<String, Object>();
-		 RResource resource=resourceService.selectByPrimaryKey(id);
+         ResourceManager resource=resourceService.selectByPrimaryKey(id);
 		 if(resource!=null){
 			 map.put("status", 200);
 		 }else{
@@ -135,13 +113,12 @@ public class ResourceControllerAdmin {
 	
 	 /**
 	  * 模糊组合分页查询资源信息
-	  * @param id，resource
 	  * @return 管理端
 	  * @throws Exception
 	  */
 	 @RequestMapping(value = "/selectLikeResourceListByPage",method=RequestMethod.POST)
 	 @ResponseBody
-	 public Map<String, Object> selectLikeResourceListByPage(String prarm,RResource resource,@RequestParam(value="page", required=true,defaultValue="1") Integer page,@RequestParam(value="pageSize", required=true,defaultValue="9") Integer pageSize) throws Exception{
+	 public Map<String, Object> selectLikeResourceListByPage(String prarm, ResourceManager resource, @RequestParam(value="page", required=true,defaultValue="1") Integer page, @RequestParam(value="pageSize", required=true,defaultValue="9") Integer pageSize) throws Exception{
 		 Map<String, Object> map=new HashMap<String, Object>();
 		 if(resource.getTitle()!=null&&resource.getTitle()!=""){
 			 map.put("title", resource.getTitle());
@@ -154,8 +131,8 @@ public class ResourceControllerAdmin {
 		 }
 		 //分页显示：第1页开始，每页显示9条记录
 		 PageHelper.startPage(page, pageSize);
-		 List<RResource> resourceList=resourceService.selectLikeResourceListByPage(map);
-		 PageInfo<RResource> pageInfo=new PageInfo<RResource>(resourceList);
+		 List<ResourceManager> resourceList=resourceService.selectLikeResourceListByPage(map);
+		 PageInfo<ResourceManager> pageInfo=new PageInfo<ResourceManager>(resourceList);
 		 Map<String, Object> returnMap=new HashMap<String, Object>();
 		 if(resourceList.size()>0){
 			 returnMap.put("status", 200);
@@ -172,7 +149,6 @@ public class ResourceControllerAdmin {
 	 
 	 /**
 	  * 通过状态查询资源信息
-	  * @param id
 	  * @return
 	  * @throws Exception
 	  */
@@ -191,6 +167,4 @@ public class ResourceControllerAdmin {
 		 return map;
 	 }
 	
-	 
-	 
 }

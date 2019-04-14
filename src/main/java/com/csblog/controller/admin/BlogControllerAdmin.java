@@ -102,11 +102,6 @@ public class BlogControllerAdmin {
 	Map<String, Object> map = new HashMap<String, Object>();
 	String username = (String)session.getAttribute("username");
 	Bloger bloger = blogerService.findUserByLoginName(username);
-	if(bloger.getHasPermission() == 0){
-		map.put("status", 0);
-		map.put("msg", "没有删除权限");
-		return map;
-	}
     String tempPath = path.replace("/", "\\");
     File fileTemp = new File("c:\\" + tempPath);
     if (fileTemp.exists()) {
@@ -197,10 +192,6 @@ public class BlogControllerAdmin {
 
   /**
    * 实现删除博客功能
-   *
-   * @param blog
-   * @return
-   * @throws Exception
    */
   @RequestMapping(value = "/deleteBlog", method = RequestMethod.POST)
   @ResponseBody
@@ -209,11 +200,7 @@ public class BlogControllerAdmin {
     Map<String, Object> map = new HashMap<String, Object>();
     String username = (String)session.getAttribute("username");
 	Bloger bloger = blogerService.findUserByLoginName(username);
-	if(bloger.getHasPermission() == 0){
-		map.put("status", 0);
-		map.put("msg", "没有删除权限");
-		return map;
-	}
+
     if (blogService.deleteBlogById(id) != 0) {
       map.put("status", 200);
       map.put("msg", "删除成功");
@@ -239,11 +226,6 @@ public class BlogControllerAdmin {
     Map<String, Object> map = new HashMap<String, Object>();
     String username = (String)session.getAttribute("username");
 	Bloger bloger = blogerService.findUserByLoginName(username);
-	if(bloger.getHasPermission() == 0){
-		map.put("status", 0);
-		map.put("msg", "没有更新权限");
-		return map;
-	}
     // 将中文的分号转换成英文的分号
     if (blog.getKeyword() != null && blog.getKeyword() != "") {
       blog.setKeyword(subStringUtil.subKeyword(blog.getKeyword()));
@@ -262,10 +244,6 @@ public class BlogControllerAdmin {
 
   /**
    * 按博客id查询博客信息
-   *
-   * @param blog
-   * @return
-   * @throws Exception
    */
   @RequestMapping(value = "/selectBlogById", method = RequestMethod.POST)
   @ResponseBody
@@ -306,10 +284,6 @@ public class BlogControllerAdmin {
 
   /**
    * 多条件模糊分页查询博客信息(or)
-   *
-   * @param id
-   * @return
-   * @throws Exception
    */
   @RequestMapping(value = "/selectLikeBlogListByPage", method = RequestMethod.POST)
   @ResponseBody
@@ -367,10 +341,6 @@ public class BlogControllerAdmin {
 
   /**
    * 模糊组合分页查询博客信息(and)
-   *
-   * @param id
-   * @return
-   * @throws Exception
    */
   @RequestMapping(value = "/selectGroupLikeBlogListByPage")
   @ResponseBody
@@ -429,9 +399,6 @@ public class BlogControllerAdmin {
   /**
    * 按照不同条件分页查询博客信息
    *
-   * @param id
-   * @return
-   * @throws Exception
    */
   @RequestMapping(value = "/selectBlogListByPage", method = RequestMethod.POST)
   @ResponseBody
@@ -490,10 +457,6 @@ public class BlogControllerAdmin {
 
   /**
    * 按照不同时间查询博客的发表数量
-   *
-   * @param id
-   * @return
-   * @throws Exception
    */
   @RequestMapping(value = "/selectBlogListByDate", method = RequestMethod.POST)
   @ResponseBody
@@ -528,9 +491,6 @@ public class BlogControllerAdmin {
   /**
    * 按照不同条件查询博客的数量
    *
-   * @param id
-   * @return
-   * @throws Exception
    */
   @RequestMapping(value = "/selectBlogCount", method = RequestMethod.POST)
   @ResponseBody
@@ -614,10 +574,6 @@ public class BlogControllerAdmin {
 
   /**
    * 通过类别typeId查询博客信息
-   *
-   * @param id
-   * @return
-   * @throws Exception
    */
   @RequestMapping(value = "/selectBlogListByStatus", method = RequestMethod.POST)
   @ResponseBody

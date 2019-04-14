@@ -112,10 +112,10 @@
               <h3 class="news_title animated fadeIn">${blog.title}</h3>
               <input class="id" type="hidden" value="${blog.id}">
               <div class="news_author animated fadeIn">
-                <span class="au01 ">luotf</span><span class="au02">
+                <span class="au01 ">csblog</span><span class="au02">
                   <input class="addtime" type="hidden"
                   value="${blog.addtime}">
-                </span><span class="au03">共<b>${blog.clicknum}</b>人围观
+                </span><span class="au03">共<b>${blog.clicknum}</b>人阅读
                 </span>
               </div>
               <input class="typeId" type="hidden"

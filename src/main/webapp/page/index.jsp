@@ -35,16 +35,16 @@
           <div id="banner" class="fader">
             <li class="slide" style=" "><a
               href="https://www.4562.com/" target="_blank"><img
-                src="${pageContext.request.contextPath}/images/5e9a97fc44fc12475b6b0e87e2ff5806.jpg"></a></li>
+                src="${pageContext.request.contextPath}/images/q1.jpg"></a></li>
 
             <li class="slide" style=" "><a
               href="javascript:void(0)"
               target="_blank"><img
-                src="${pageContext.request.contextPath}/images/2.jpg"></a></li>
+                src="${pageContext.request.contextPath}/images/q2.jpg"></a></li>
 
             <li class="slide" style=""><a
               href="https://www.4562.com/" target="_blank"><img
-                src="${pageContext.request.contextPath}/images/8db2f0313616ebe46ca5770769850b42.png"></a></li>
+                src="${pageContext.request.contextPath}/images/q3.jpg"></a></li>
             <div class="fader_controls">
               <div class="pic_page prev" data-target="prev"></div>
               <div class="pic_page next" data-target="next"></div>
@@ -89,11 +89,6 @@
 
         </ul>
       </div>
-     <%-- <div class="ad whitebg">
-        <a href="#" target="_blank"> <img
-          src="${pageContext.request.contextPath}/images/longad2.png">
-        </a>
-      </div>--%>
 
       <div class="newblogs bloglist whitebg animated fadeIn"
         style="display:none;animation-delay:0.3s">
@@ -112,11 +107,11 @@
 
     <div class="rbox">
       <div class="card">
-        <h2>名片</h2>
-        <p>网名：你尽管try,我都catch | csblog</p>
+        <h2>个人名片</h2>
+        <p>座右铭：你尽管try,我都catch | csblog</p>
         <p>职业：男程序员，Java研发工程师</p>
         <p>家乡：江西省-抚州市</p>
-        <p>Email：2822739876@qq.com</p>
+        <p>Email：orangecsong@163.com</p>
         <ul class="linkmore">
           <li><a href="http://www.baidu.com" target="_blank"
             class="iconfont icon-zhuye" title="网站地址"></a></li>
@@ -148,9 +143,9 @@
       </div>
       <div class="weixin whitebg animated fadeIn"
         style="display:none;animation-delay:0.3s">
-        <h2 class="htitle">公众号</h2>
+        <h2 class="htitle">微信号</h2>
         <ul class="animated fadeIn">
-          <img src="${pageContext.request.contextPath}/images/wx.jpg">
+          <img src="${pageContext.request.contextPath}/images/my_vx.jpg">
         </ul>
       </div>
       <div class="link links whitebg animated fadeIn"

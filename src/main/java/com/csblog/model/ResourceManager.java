@@ -5,25 +5,24 @@ import java.util.Date;
 
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
-
 @Data
-public class BlackIp implements Serializable{
-    
+public class ResourceManager implements Serializable{
+   
 	private static final long serialVersionUID = 1L;
 
 	private Integer id;
 
-    private Integer vid;
+    private String title;
+
+    private String content;
+
+    private String link;
+
+    private String password;
     
-    private String ip;
-
-    private String city;
-
-    private String browsertype;
-
-    private String platformtype;
-
     @DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
-    private Date time;
+    private Date addtime;
+
+    private Integer status;
 
 }

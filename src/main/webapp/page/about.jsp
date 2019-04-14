@@ -67,7 +67,7 @@
 				</div>
 			</div>
 			<div class="weixin animated fadeIn whitebg">
-				<h2 class="htitle">公众号</h2>
+				<h2 class="htitle">微信号</h2>
 				<ul>
 					<img src="${pageContext.request.contextPath}/images/my_vx.jpg">
 				</ul>

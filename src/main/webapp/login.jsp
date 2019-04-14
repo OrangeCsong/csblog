@@ -69,8 +69,7 @@
 					<p class="m-t-md">登录访问 luotf 后台管理网站</p>
 					<input type="text" id="username" name="username" class="form-control uname"
 						placeholder="用户名" /> <input type="password" name="password" id="password"
-						class="form-control pword m-b" placeholder="密码" /> <a
-						style="color:#101010de" href="javascript:void(0);">忘记密码了？</a>
+						class="form-control pword m-b" placeholder="密码" />
 						 <span class="msg" style="color:#6722228a;margin-left:20px;"
 						href="javascript:void(0);">${message }</span>
 					<button type="button" onclick="login()" class="btn btn-success btn-block">登录</button>

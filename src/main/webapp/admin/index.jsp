@@ -50,7 +50,7 @@
 							<a data-toggle="dropdown" class="dropdown-toggle" href="#"> <span
 								class="clear"> <span class="block m-t-xs"><strong
 										class="font-bold">橘子松</strong></span> <span
-									class="text-muted text-xs block">超级管理员<b class="caret"></b></span>
+									class="text-muted text-xs block">管理员<b class="caret"></b></span>
 							</span>
 							</a>
 							<ul class="dropdown-menu animated fadeInRight m-t-xs">
@@ -120,10 +120,6 @@
 						</ul>	
 						</li>
 						
-					<li><a href="http://changyan.kuaizhan.com/" class="J_menuItem"><i class="fa fa-commenting-o"></i> <span
-							class="nav-label">评论模块</span></a>
-						</li>
-					
 					<li><a href="${pageContext.request.contextPath}/admin/pics/pics.jsp" class="J_menuItem"><i class="fa fa-picture-o"></i> <span
 							class="nav-label">本地图库</span></a>
 						</li>
@@ -276,11 +272,6 @@
 							</div>
 						</div>
 					</div>
-
-
-
-
-
 				</div>
 
 			</div>

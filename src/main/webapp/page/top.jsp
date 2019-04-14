@@ -15,13 +15,13 @@
     src="${pageContext.request.contextPath}/js/jquery-1.8.3.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/comm.js"></script>
 <style>
-* {
+/** {
   cursor: url('${pageContext.request.contextPath}/images/ani/a.cur'), auto;
-}
+}*/
 
-a {
+/*a {
   cursor: url('${pageContext.request.contextPath}/images/ani/b.cur'), auto;
-}
+}*/
 </style>
 </head>
 <header id="header">
@@ -106,7 +106,7 @@ var _hmt = _hmt || [];
   }
     /*鼠标特效 */
     /*这个方法用来随机一个十六进制颜色代码，让每一次点击浮动文字的杨色不同*/
-    function co() {
+    /*function co() {
       var colorElements = "0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f";
       var colorArray = colorElements.split(",");
       var color = "#";
@@ -120,7 +120,7 @@ var _hmt = _hmt || [];
     jQuery(document).ready(function($) {
       initAllBlogType();
       $("body").click(function(e) {
-        /*这个数组中的每一个字符是你要浮动显示的词或句子，每次点击鼠标后按顺序出现*/
+        /!*这个数组中的每一个字符是你要浮动显示的词或句子，每次点击鼠标后按顺序出现*!/
         var a = new Array("Hello基佬", "你再点", "你继续点", "你有本事接着点", "有种你还点", "快别他妈点了", "好好看文章不行吗");
         var $i = $("<span/>").text(a[a_idx]);
         a_idx = (a_idx + 1) % a.length;
@@ -144,6 +144,7 @@ var _hmt = _hmt || [];
             $i.remove();
           });
       });
-    });
+    });*/
+
   </script>
 </header>
