@@ -37,7 +37,7 @@
 			<div class="col-sm-7">
 				<div class="signin-info">
 					<div class="logopanel m-b">
-						<h1>[ luotf.com ]</h1>
+						<h1>[ xx.com ]</h1>
 					</div>
 					<div class="m-b"></div>
 					<h4>

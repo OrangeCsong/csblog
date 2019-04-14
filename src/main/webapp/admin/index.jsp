@@ -113,9 +113,9 @@
 						<li><a href="#" class="links"><i class="fa fa-unlink"></i> <span
 							class="nav-label">友情链接</span>               </a>
 						<ul class="nav nav-second-level">
-							<li><a class="J_menuItem" href="${pageContext.request.contextPath}/admin/links/links.jsp"> 友情链接 </a>
+							<li><a class="J_menuItem" href="${pageContext.request.contextPath}/admin/links/links.jsp"> 链接列表 </a>
 							</li>
-							<li class="isApplyLinks"><a class="J_menuItem" href="${pageContext.request.contextPath}/admin/links/isApplyLinks.jsp"> 未处理消息 </a>
+							<li class="isApplyLinks"><a class="J_menuItem" href="${pageContext.request.contextPath}/admin/links/isApplyLinks.jsp"> 系统消息 </a>
 							</li>
 						</ul>	
 						</li>

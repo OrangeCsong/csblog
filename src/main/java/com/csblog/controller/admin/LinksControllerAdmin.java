@@ -23,8 +23,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
-
-
 @Controller
 @RequestMapping(value = "/admin")
 public class LinksControllerAdmin {
@@ -34,11 +32,8 @@ public class LinksControllerAdmin {
 	@Resource(name = "blogerServiceImpl")
 	private BlogerService blogerService;
 	
-	
 	/**
 	  * 实现添加友链功能
-	  * @return
-	  * @throws Exception
 	  */
 	 @RequestMapping(value = "/addLinks",method = RequestMethod.POST)
 	 @ResponseBody
@@ -82,11 +77,10 @@ public class LinksControllerAdmin {
 	  */
 	 @RequestMapping(value = "/deleteLinks",method = RequestMethod.POST)
 	 @ResponseBody
-	 @SystemLog(description = ConstantUtil.LINKS_DELETE,userType=ConstantUtil.USERTYPE_ADMIN) 
+	// @SystemLog(description = ConstantUtil.LINKS_DELETE,userType=ConstantUtil.USERTYPE_ADMIN)
 	 public Map<String, Object> deleteLinks(String prarm, HttpSession session,Integer id) throws Exception{
 		 Map<String, Object> map=new HashMap<String, Object>();
 		 String username = (String) session.getAttribute("username");
-		    Bloger bloger = blogerService.findUserByLoginName(username);
 		 if(linksService.deleteByPrimaryKey(id)!=0){
 			 map.put("status", 200);
 		 }else{
@@ -178,9 +172,6 @@ public class LinksControllerAdmin {
 	 
 	 /**
 	  * 通过状态查询友链信息
-	  * @param id
-	  * @return
-	  * @throws Exception
 	  */
 	 @RequestMapping(value = "/selectLinksListByStatus",method = RequestMethod.POST)
 	 @ResponseBody

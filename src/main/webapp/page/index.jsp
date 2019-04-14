@@ -34,7 +34,7 @@
         <div class="banner">
           <div id="banner" class="fader">
             <li class="slide" style=" "><a
-              href="https://www.4562.com/" target="_blank"><img
+              href="javascript:void(0)" target="_blank"><img
                 src="${pageContext.request.contextPath}/images/q1.jpg"></a></li>
 
             <li class="slide" style=" "><a
@@ -43,7 +43,7 @@
                 src="${pageContext.request.contextPath}/images/q2.jpg"></a></li>
 
             <li class="slide" style=""><a
-              href="https://www.4562.com/" target="_blank"><img
+              href="javascript:void(0)" target="_blank"><img
                 src="${pageContext.request.contextPath}/images/q3.jpg"></a></li>
             <div class="fader_controls">
               <div class="pic_page prev" data-target="prev"></div>
@@ -58,13 +58,11 @@
       <div class="headline">
         <ul>
           <li><a href="find/20400.html"
-            title="【2019届校园招聘】如何准备互联网校招？"><img
-              src="${pageContext.request.contextPath}/images/3ee0644472fa8556562ab3d8716b5316.jpg"
-              alt="【2019届校园招聘】【2019届校园招聘】如何准备互联网校招？"><span>【2019届校园招聘】<br> 该如何准备互联网校招？</span></a></li>
+            title="【2019,我毕业了】回首大学四年"><img
+              src="${pageContext.request.contextPath}/images/nav1.jpg"><span>【2019,我毕业了】<br> 回首大学四年 </span></a></li>
           <li><a href="find/19873.html"
             title="【匆匆校园招聘季】总结校招经历的这几个月…"><img
-              src="${pageContext.request.contextPath}/images/3f0b6da48a6fd4e626a021ff7bd0d74f.jpg"
-              alt="【匆匆校园招聘季】总结校招经历的这几个月…"><span>【匆匆校园招聘季】<br>总结校招经历的这几个月</span></a></li>
+              src="${pageContext.request.contextPath}/images/nav2.jpg"><span>【匆匆校园招聘季】<br>总结校招经历的这几个月</span></a></li>
         </ul>
       </div>
 
@@ -101,9 +99,7 @@
         <p class="pageMin">
         <p>
       </div>
-
     </div>
-
 
     <div class="rbox">
       <div class="card">
@@ -162,7 +158,7 @@
 
       <div class="guanzhu gd whitebg animated fadeIn"
         style="display:none" id="follow-us">
-        <h2 class="cloud_hometitle">来波关注</h2>
+        <h2 class="cloud_hometitle">关注一下</h2>
         <ul>
           <li class="qq"><a href="javascript:void(0)"
             target="_blank"><span>QQ号</span>2822739876</a></li>
@@ -170,8 +166,6 @@
             target="_blank"><span>邮箱帐号</span>orangecsong@163.com</a></li>
           <li class="wxgzh"><a href="javascript:void(0)"
             target="_blank"><span>微信号</span>cs-fighting-WN</a></li>
-          <li class="wx" style="border:none"><img
-            src="${pageContext.request.contextPath}/images/my_qq.jpg"></li>
         </ul>
       </div>
     </div>

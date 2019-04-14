@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>关于我_个人博客 - 一个在Java道路上的技术员个人博客网站</title>
-<meta name="keywords" content="个人博客,罗廷方个人博客,罗廷方" />
+<title>关于我</title>
+<meta name="keywords" content="个人博客,橘子松个人博客,橘子松" />
 <link rel="shortcut icon"
 	href="${pageContext.request.contextPath}/images/favicon.ico">
-<meta name="description" content="罗廷方个人博客，是一个在Java道路上的技术员个人博客网站" />
+<meta name="description" content="橘子松个人博客，是一个在Java道路上的技术员个人博客网站" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="${pageContext.request.contextPath}/css/animate.css"
 	rel="stylesheet">
@@ -27,10 +27,10 @@
 					</h2>
 					<div class="news_infos m20 animated fadeIn">
           <br>
-						<h3 style="color: #000;font-size: 15px;">关于站长</h3>
+						<h3 style="color: #000;font-size: 15px;">关于我</h3>
 						<br>
-						<p>陈松，男，一个95后站长，四川人。</p>
-            <p>建站时间：2018.03-2018.06。</p>
+						<p>陈松，男，一个95后小伙子，江西人。</p>
+            <p>项目周期：2018.03-2018.06。</p>
 						<p>15年09月至18年4月一直潜心研究Java，一边读书一边学习Java，完成该作品时、大三。</p>
 						<br>
 						<h3 style="color: #000;font-size: 15px;">为什么要做这个网站</h3>
@@ -42,9 +42,8 @@
 						<br>
 						<h3 style="color: #000;font-size: 15px;">关于我的博客</h3>
 						<br>
-						<p>域名：www.luotf.com</p>
-						<p>服务器：阿里云服务器</p>
-						<p>备案号：蜀ICP备18001827号-1</p>
+						<p>名称：橘子松博客</p>
+						<p>名称意义：orangecsong(csblog)</p>
 						<p>程序：Java</p>
 						<a target= "_blank" href="http://localhost:8080/find/13015.html"><span style="color: #12aae8;font-size: 13px;">查看更多</span></a>
 					<br>
@@ -60,10 +59,10 @@
 					<img src="${pageContext.request.contextPath}/images/my.jpeg">
 				</div>
 				<div class="ab_con animated fadeIn">
-                    <p>网名：你尽管try,我都catch | csblog</p>
-                    <p>职业：男程序员，Java研发工程师</p>
+                    <p>座右铭：你尽管try,我都catch!</p>
+                    <p>职业：Java研发工程师</p>
                     <p>家乡：江西省-抚州市</p>
-                    <p>Email：2822739876@qq.com</p>
+                    <p>Email：orangecsong@163.com</p>
 				</div>
 			</div>
 			<div class="weixin animated fadeIn whitebg">

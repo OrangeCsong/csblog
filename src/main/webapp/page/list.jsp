@@ -98,7 +98,7 @@
       </div>
       <div class="guanzhu gd whitebg animated fadeIn" style="display:none"
         id="follow-us">
-        <h2 class="cloud_hometitle">来波关注</h2>
+        <h2 class="cloud_hometitle">关注一下</h2>
         <ul>
           <li class="qq"><a href="javascript:void(0)"
             target="_blank"><span>QQ号</span>2822739876</a></li>
@@ -106,8 +106,6 @@
             target="_blank"><span>邮箱帐号</span>orangecsong@163.com</a></li>
           <li class="wxgzh"><a href="javascript:void(0)"
             target="_blank"><span>微信号</span>cs-fighting-WN</a></li>
-          <li class="wx" style="border:none"><img
-            src="${pageContext.request.contextPath}/images/my_qq.jpg"></li>
         </ul>
       </div>
     </div>

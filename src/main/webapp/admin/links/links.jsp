@@ -48,15 +48,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<h5>友链状态</h5>
 							<ul class="folder-list m-b-md" style="padding: 0">
 								<li class="share" value="0"><a href="javascript:void(0);">
-										<i class="fa fa-inbox "></i>总共<span
+										<i class="fa fa-inbox "></i>全部友链<span
 										class="a-1 label label-info pull-right">0 条</span>
 								</a></li>
 								<li class="share" value="1"><a href="javascript:void(0);">
-										<i class="fa fa-file-text-o "></i>已上架<span
+										<i class="fa fa-file-text-o "></i>上架友链<span
 										class="a-2 label label-warning pull-right">0 条</span>
 								</a></li>
 								<li class="share" value="-1"><a href="javascript:void(0);">
-										<i class="fa fa-trash-o "></i>下架<span
+										<i class="fa fa-trash-o "></i>下架友链<span
 										class="a-3 label label-danger pull-right">0 条</span>
 								</a></li>
 							</ul>

@@ -1,6 +1,3 @@
-/**
- * 
- */
 var globalCount = 0;
 $(".top").click(function() {
   $('body,html').animate({
@@ -17,69 +14,7 @@ var width = window.innerWidth || document.documentElement.clientWidth;
 if (width < 660) {
   var pagenav = '<p style="text-align:center;margin:-5px auto 20px;"><a href="javascript:void(0);" onclick="initBlogByClickMore()"><i class="fa fa-arrow-down"></i> 加载更多</a></p>';
   $(".pageMin").html(pagenav);
-//$(".top").css("display", "none");
 }
-
-/*function init() {
-  //实现弹出广告的效果
-  //1.设置定时效果
-  time = setInterval("showAd()", 12000);
-}
-//2.书写显示广告图片的函数
-function showAd() {
-  /!*!//3.获取广告图片的位置
-  var adEle = document.getElementById("image2");
-  //4.修改广告图片元素里面的属性让其显示
-  adEle.style.display = "block";*!/
-  showAdToGitEE();
-  //5.清除显示图片的定时操作
-  clearInterval(time);
-//6.设置隐藏图片的定时操作
-//time = setInterval("hiddenAd()", 3000);
-}
-
-/!*!//7.书写隐藏广告图片的函数
-function hiddenAd() {
-  //8.获取广告图片并设置其style属性的display值为none
-  document.getElementById("image2").style.display = "none";
-  //9.清除隐藏广告图片的定时操作
-  clearInterval(time);
-}*!/
-
-function showAdToGitEE() {
-  swal({
-    title : '前往开源地址 :)',
-    text : '此系统已在gitee/github上开源,将全面介绍此系统的管理端,技术栈;如果您觉得不错，欢迎前往gitee上 【Star，Fork】 ',
-    type : 'info',
-    showCancelButton : true,
-    confirmButtonColor : "#1c84c6",
-    confirmButtonText : "前往",
-    cancelButtonText : "取消",
-    timer:8000,
-    closeOnConfirm : false,
-    closeOnCancel: false
-  }, function(isConfirm) {
-    if (isConfirm) {
-      window.open("https://gitee.com/luotf/Art_Blog");
-      swal.close()
-    } else {
-      swal({
-        title:"确定不去看看吗？", 
-        text:"你的访问就是对博主最大的支持，谢谢 ^-^", 
-        type:"info",
-        confirmButtonColor : "#1c84c6",
-        showCancelButton : true,
-        confirmButtonText : "前往",
-        cancelButtonText : "取消",
-        },function(isConfirm){
-          if (isConfirm) {
-            window.open("https://gitee.com/luotf/Art_Blog");
-          }
-          swal.close()
-      });
-    }
-  });
-}*/
 
 $(window).scroll(
   function() {
