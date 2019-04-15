@@ -16,19 +16,22 @@
     <!--加载数据库配置文件-->
     <context:property-placeholder location="classpath:mysql.properties" />
 
-    <!--配置数据源 c3p0l连接池-->	
-    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" >
-        <property name="driverClass" value="${jdbc.driver}" />
-        <property name="jdbcUrl" value="${jdbc.url}" />
-        <property name="user" value="${jdbc.username}" />
-        <property name="password" value="${jdbc.password}" />
-        <property name="testConnectionOnCheckout" value="${jdbc.c3p0.testConnectionOnCheckout}" />
-        <property name="testConnectionOnCheckin" value="${jdbc.c3p0.testConnectionOnCheckin}" />
-        <property name="idleConnectionTestPeriod" value="${jdbc.c3p0.idleConnectionTestPeriod}" />
-        <property name="initialPoolSize" value="${jdbc.c3p0.initialPoolSize}" />
-        <property name="minPoolSize" value="${jdbc.c3p0.minPoolSize}" />
-		<property name="maxPoolSize" value="${jdbc.c3p0.maxPoolSize}" />
-		<property name="maxIdleTime" value="${jdbc.c3p0.maxIdleTime}" />
+    <!-- Hikari Datasource -->
+    <bean id="dataSourceHikari" class="com.zaxxer.hikari.HikariDataSource">
+        <property name="driverClassName" value="${jdbc.driver}" />
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <!-- 连接只读数据库时配置为true， 保证安全 -->
+        <property name="readOnly" value="false"/>
+        <!-- 等待连接池分配连接的最大时长（毫秒），超过这个时长还没可用的连接则发生SQLException， 缺省:30秒 -->
+        <property name="connectionTimeout" value="30000"/>
+        <!-- 一个连接idle状态的最大时长（毫秒），超时则被释放（retired），缺省:10分钟 -->
+        <property name="idleTimeout" value="600000"/>
+        <!-- 一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），缺省:30分钟，建议设置比数据库超时时长少30秒，参考MySQL wait_timeout参数（show variables like '%timeout%';） -->
+        <property name="maxLifetime" value="1800000"/>
+        <!-- 连接池中允许的最大连接数。缺省值：10；推荐的公式：((core_count * 2) + effective_spindle_count) -->
+        <property name="maximumPoolSize" value="15"/>
     </bean>
 
     <!--配置SqlSessionFactory-->
@@ -45,15 +48,10 @@
           </bean>
         </array>
       </property>
-       
         <!--加载mybatis配置文件-->
         <property name="configLocation" value="classpath:mybatis/mybatis.cfg.xml"/>
         <!--数据源-->
-        <property name="dataSource" ref="dataSource"/>
-        
-
-       
-        
+        <property name="dataSource" ref="dataSourceHikari"/>
     </bean>
 
     <!--Mapper批量扫描，从Mapper包扫描接口，自动创建代理对象，并在Spring容器中自动注册

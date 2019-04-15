@@ -84,7 +84,6 @@ jQuery(function() {
         disableGlobalDnd: true,
 
         chunked: true,
-        // server: 'http://webuploader.duapp.com/server/fileupload.php',
         server: '../uploadBg',
         fileNumLimit: 300,
         fileSizeLimit: 5 * 1024 * 1024,    // 200 M
@@ -140,7 +139,6 @@ jQuery(function() {
                     $wrap.text( '不能预览' );
                     return;
                 }
-
                 var img = $('<img src="'+src+'">');
                 $wrap.empty().append( img );
             }, thumbnailWidth, thumbnailHeight );

@@ -17,7 +17,7 @@
         <!--配置数据源
         dataSource在applicationContext-dao.xml中配置了
         -->
-        <property name="dataSource" ref="dataSource" />
+        <property name="dataSource" ref="dataSourceHikari" />
     </bean>
 
     <!--通知-->

@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.csblog.util.ConstantUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -31,9 +32,7 @@ public class FileBrowseUtil {
      */
     @RequestMapping("/getFileList")
     @ResponseBody
-    protected Map<String, Object> CalculateGeoServlet(HttpServletRequest req,
-            HttpServletResponse resp) throws ServletException, IOException,
-            MalformedURLException {
+    protected Map<String, Object> CalculateGeoServlet() {
         ArrayList<String> fileList=new ArrayList<String>();
         String params="c:\\upload\\background";
         fileList=getFiles(params,fileList);
@@ -59,9 +58,6 @@ public class FileBrowseUtil {
         if(files!=null){
           for (File file : files) {
             if (file.isDirectory()) {
-                /*
-                 * 递归调用
-                 */
                 arr=file.getAbsolutePath().split(":");
                 getFiles(arr[1].replace("\\","/"),fileListAll);
             } else {
@@ -71,5 +67,12 @@ public class FileBrowseUtil {
            }
         }
         return fileListAll;
+    }
+
+    //测试从服务器获取图片
+    public static void main(String[] args) {
+        ArrayList<String> fileList = new ArrayList<String>();
+        String params = "http://47.106.148.234:89/usr/local";
+        fileList = getFiles(params, fileList);
     }
 }

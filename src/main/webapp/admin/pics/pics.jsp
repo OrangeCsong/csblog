@@ -119,7 +119,7 @@ bottom: 15px;
         <div class="ibox float-e-margins">
           <div class="ibox-title">
             <h5>
-              服务器图库 <small>http://www.luot.com/</small>
+              服务器图库 <small>[csblog]</small>
             </h5>
             <div class="ibox-tools">
               <a class="collapse-link"> <i class="fa fa-chevron-up"></i>

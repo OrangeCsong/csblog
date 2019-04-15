@@ -101,10 +101,9 @@
 			<if test="platformType!=null and platformType!=''">
 				and platformType =#{platformType}
 			</if>
-			
+
 			<if test="time!=null ">
 				and TO_DAYS(DATE_FORMAT(time,'%Y-%m-%d')) = TO_DAYS(#{time})
-				<!-- and TO_DAYS(DATE_FORMAT(time,'%Y-%m-%d')) = TO_DAYS(#{time}) -->
 			</if>
 		</where>
 	</select>

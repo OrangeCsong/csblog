@@ -117,7 +117,7 @@
 											onclick="findPicList()"> <img
 											class="picPath animated fadeInRight"
 											style="width: 190px; height: 115px;" alt="封面" title="点击更换封面"
-											src="/upload/background/2018-05-17334750.JPG" />
+											src="${pageContext.request.contextPath}/images/blogfm.jpg" />
 										</a>
 									</div>
 								</div>

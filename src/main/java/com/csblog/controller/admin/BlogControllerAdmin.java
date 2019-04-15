@@ -71,7 +71,7 @@ public class BlogControllerAdmin {
             SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
             String newFileName = df.format(new Date());
             String fileNames = newFileName + new Random().nextInt(1000000) + "." + fileExt;
-            String filePath = ResourceMapping.UPLOAD_IMAGE_PATH + fileNames;
+            String filePath = "c:\\upload\\background\\" + fileNames;
             File localFile = new File(filePath);
             if (!localFile.exists()) {
               localFile.mkdirs();
@@ -97,12 +97,10 @@ public class BlogControllerAdmin {
    */
   @RequestMapping(value = "/deletePic", method = RequestMethod.POST)
   @ResponseBody
-  @SystemLog(description = ConstantUtil.DELETE_IMAGES, userType = ConstantUtil.USERTYPE_ADMIN)
+  //@SystemLog(description = ConstantUtil.DELETE_IMAGES, userType = ConstantUtil.USERTYPE_ADMIN)
   public Map<String, Object> deletePic(String prarm, HttpSession session,String path, HttpServletRequest request)
       throws Exception {
 	Map<String, Object> map = new HashMap<String, Object>();
-	String username = (String)session.getAttribute("username");
-	Bloger bloger = blogerService.findUserByLoginName(username);
     String tempPath = path.replace("/", "\\");
     File fileTemp = new File("c:\\" + tempPath);
     if (fileTemp.exists()) {
@@ -222,16 +220,13 @@ public class BlogControllerAdmin {
    */
   @RequestMapping(value = "/updateBlog", method = RequestMethod.POST)
   @ResponseBody
-  @SystemLog(description = ConstantUtil.BLOG_UPDATE, userType = ConstantUtil.USERTYPE_ADMIN)
+ // @SystemLog(description = ConstantUtil.BLOG_UPDATE, userType = ConstantUtil.USERTYPE_ADMIN)
   public Map<String, Object> updateBlog(String prarm, Blog blog,HttpSession session) throws Exception {
     Map<String, Object> map = new HashMap<String, Object>();
-    String username = (String)session.getAttribute("username");
-	Bloger bloger = blogerService.findUserByLoginName(username);
     // 将中文的分号转换成英文的分号
     if (blog.getKeyword() != null && blog.getKeyword() != "") {
       blog.setKeyword(subStringUtil.subKeyword(blog.getKeyword()));
     }
-
     if (blogService.updateBlogSelective(blog) != 0) {
       map.put("status", 200);
       map.put("msg", "更新成功");
