@@ -153,26 +153,7 @@ var globalCount = 0;
             + ')</span><span class="f_r"></p><a href="find/' + id + '.html" class="viewmore">阅读原文</a></span></li>'
           
           }
-          var p = {
-            client_id : 'cytzg9rLH',
-            topic_source_id : parm
-          };
-          $.ajax({
-            url : 'http://changyan.sohu.com/api/2/topic/count',
-            type : 'get',
-            data : p,
-            dataType : 'jsonp',
-            success : function(pl) {
-              for (var i = 0; i < arr.length; i++) {
-                $('.' + arr[i]).html(pl.result[arr[i]].comments);
-              }
-            },
-            error : function() {
-              layer.msg('出错啦', {
-                icon : 2
-              });
-            }
-          });
+
         } else {
           blogList = "<h1 style='font-size:110px;text-align:center;margin:20px;'>404</h1><h3 style='text-align:center;' class='font-bold'>抱歉，你所访问的资源不存在~</h3><h4 style='margin-bottom:110px;margin-top:55px;text-align:center;'><a style='background-color: #676a6c;padding: 5px 10px;color: #fff;border-radius: 10px;' href='index.jsp'>去首页</a></h4>";
         }

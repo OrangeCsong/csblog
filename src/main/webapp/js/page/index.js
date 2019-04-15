@@ -108,8 +108,6 @@ var initBlogByTop = function() {
       for (var i = 0; i < data.length; i++) {
         var id = data[i].id.toString(8) * data[i].id;
         topBlog += '<li><a href="find/' + id + '.html" title=' + data[i].title + ' target="_blank">' + data[i].title + '</a></li>';
-      /*topBlog += '<li class="animated fadeIn"><a href="find/' + id + '.html" onclick=""><img style="width:415px;height:155px;" src="' + data[i].images + '"></a><span>'
-        + data[i].title + '</span></li>'*/
       }
       // 初始化数据
       $(".notice").find("ul").html(topBlog);
@@ -260,7 +258,7 @@ var initBlogByNew = function(page) {
             + data[i].title
             + '</a></h3><span class="blogpic imgscale"><a href="find/' + id + '.html" title=""><img src="' + data[i].images + '"  /></a></span><p class="blogtext">'
             + data[i].introduction
-            + '</p><p class="bloginfo"><i class = "avatar"><img src="images/image_.jpg" border=0 width="30" height="30"></i><span>luotf</span><span><a href="javascript:void(0);">【'
+            + '</p><p class="bloginfo"><i class = "avatar"><img src="images/image_.jpg" border=0 width="30" height="30"></i><span>csblog</span><span><a href="javascript:void(0);">【'
             + keyword
             + '】</a></span><span class="m_time">'
             + Format(data[i].addtime, "yyyy-MM-dd")
@@ -268,29 +266,7 @@ var initBlogByNew = function(page) {
             + data[i].clicknum
             + ')</span><span class="f_r"></p><a href="find/' + id + '.html" class="viewmore">阅读原文</a></span></li>'
         }
-        var p = {
-          client_id : 'cytzg9rLH',
-          topic_source_id : parm
-        };
-        $
-          .ajax({
-            url : 'http://changyan.sohu.com/api/2/topic/count',
-            type : 'get',
-            data : p,
-            dataType : 'jsonp',
-            success : function(pl) {
-              for (var i = 0; i < arr.length; i++) {
-                $('.' + arr[i])
-                  .html(
-                    pl.result[arr[i]].comments);
-              }
-            },
-            error : function() {
-              layer.msg('出错啦', {
-                icon : 2
-              });
-            }
-          });
+
         // 初始化数据
         if (page.pageNum >= 2) {
           $(".newblogs").find("ul").append(newBlog);
@@ -333,8 +309,7 @@ var initBlogByClick = function() {
     sort : "clickNum", //按点击量排序,默认按时间
     status : 1,
   };
-  $
-    .ajax({
+  $.ajax({
       url : 'selectGroupLikeBlogListByPage',
       type : 'get',
       data : params,
@@ -348,8 +323,7 @@ var initBlogByClick = function() {
           time = i * 0.05;
           clickBlog += '<li style="animation-delay:0.' + i + 's" class="animated fadeIn"><b><a target="_blank" href="find/' + id + '.html">'
             + data[i].title
-            + '</a></b><p><i><img src="' + data[i].images + '"></i><span>'
-            + data[i].introduction + '</span></p></li>'
+            + '</a></b><p><i><img src="' + data[i].images + '"></i></p></li>'
         }
         // 初始化数据
         $(".paihang").find("ul").html(clickBlog);

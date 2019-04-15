@@ -109,15 +109,15 @@
         <p>家乡：江西省-抚州市</p>
         <p>Email：orangecsong@163.com</p>
         <ul class="linkmore">
-          <li><a href="http://www.baidu.com" target="_blank"
-            class="iconfont icon-zhuye" title="网站地址"></a></li>
+          <li><a href="47.106.148.234/csblog" target="_blank"
+            class="iconfont icon-zhuye" title="网站主页"></a></li>
           <li><a
             href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=-MTIxcrLz8jMyLyNjdKfk5E"
             target="_blank" class="iconfont icon-youxiang" title="我的邮箱"></a></li>
           <li><a
             href="http://wpa.qq.com/msgrd?v=3&uin=2822739876&site=qq&menu=yes"
             target="_blank" class="iconfont icon---" title="QQ联系我"></a></li>
-          <li id="weixin"><a href="#" target="_blank"
+          <li id="weixin"><a href="javascript:void(0)" target="_blank"
             class="iconfont icon-weixin" title="关注我的微信"></a><i><img
               src="${pageContext.request.contextPath}/images/my_vx.jpg"></i></li>
         </ul>

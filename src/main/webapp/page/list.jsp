@@ -113,7 +113,5 @@
   </article>
   <script src="${pageContext.request.contextPath}/js/page/list.js"></script>
   <script src="${pageContext.request.contextPath}/js/layer/layer.js"></script>
-  <script id="cy_cmt_num"
-    src="http://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cytzg9rLH"></script>
 </body>
 </html>

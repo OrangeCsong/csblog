@@ -94,7 +94,6 @@ public class BlogController {
 	 
 	 /**
 	  * 模糊组合分页查询博客信息(含content)
-	  * @param id
 	  * @return
 	  * @throws Exception
 	  */
@@ -151,7 +150,6 @@ public class BlogController {
 	
 	 /**
 	  * 模糊组合分页查询博客信息(and)
-	  * @param id
 	  * @return
 	  * @throws Exception
 	  */
@@ -165,7 +163,7 @@ public class BlogController {
 			 map.put("title", blog.getTitle());
 		 }
 		 if(blog.getIntroduction()!=null&&blog.getIntroduction()!=""){
-			 map.put("introduction", blog.getIntroduction());
+             map.put("introduction", blog.getIntroduction());
 		 }
 		 if(blog.getKeyword()!=null&&blog.getKeyword()!=""){
 			 map.put("keyword", blog.getKeyword());

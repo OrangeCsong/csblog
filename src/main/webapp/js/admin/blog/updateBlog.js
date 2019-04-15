@@ -58,22 +58,7 @@ $(document).ready(function() {
 		}
 	});
 
-	var p = {
-		client_id : 'cytzg9rLH',
-		topic_source_id : url_param
-	};
-	$.ajax({
-		url : 'http://changyan.sohu.com/api/2/topic/count',
-		type : 'get',
-		data : p,
-		dataType : 'jsonp',
-		success : function(pl) {
-			$("#commentnum").html(pl.result[url_param].comments);
-		},
-		error : function() {
-			swal("获取评论数错误", "请重试操作", "error");
-		}
-	});
+
 	//查询出文章类别
 	//设置参数，表示查询所有的类别
 	var params = {

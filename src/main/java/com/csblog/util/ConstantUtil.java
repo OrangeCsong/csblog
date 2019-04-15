@@ -2,7 +2,12 @@ package com.csblog.util;
 
 public class ConstantUtil {
 
-	public static final String USERTYPE_ADMIN="管理员";
+    /**
+     * 文章字数限制
+     */
+    public static final int Max_Blog_Size = 34;
+
+    public static final String USERTYPE_ADMIN="管理员";
 	
 	public static final String USERTYPE_USER="普通用户";
 	

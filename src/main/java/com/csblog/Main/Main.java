@@ -44,5 +44,11 @@ public class Main {
 
   public static void main(String[] args) {
     //new Main().testThread();
+      String str = "最近做项目中，我碰到取客户端浏览器和操作系统信息的问题，网上找了很久";
+      System.out.println(str.length());
+      String xxx = "最近做项目中，我碰到取客户端浏览器和操作系统信息的问题，网上找了很久，大多都是在页面中嵌入JS实现的，无法满足我的要求。所以，就自己写了个方法。我是根据每个浏览器User-Agent的特征，来判断的。";
+      System.out.println(xxx.substring(0,34));
+
+
   }
 }

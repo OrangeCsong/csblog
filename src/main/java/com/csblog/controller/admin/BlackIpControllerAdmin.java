@@ -164,5 +164,4 @@ public class BlackIpControllerAdmin {
 		 }
 		 return map;
 	 }
-	 
 }

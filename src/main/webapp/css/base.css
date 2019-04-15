@@ -611,9 +611,9 @@ footer a {
 .bloglist ul {padding: 10px 0 0;}
 .bloglist li { overflow: hidden; margin-bottom: 10px; border-bottom: #eee 1px dashed; padding-bottom: 10px; position: relative; min-height: 120px; z-index: 1;}
 .blogtitle { margin: 0 0 10px 0; font-size: 18px; overflow: hidden; }
-.bloglist li:hover .blogtitle a { color: #337ab7; }
+.bloglist li:hover .blogtitle a { color: #009966; }
 .blogtitle b { color: #F00 }
-a.viewmore { display: block; right: 10px; bottom: 20px; position: absolute; padding: 3px 10px; background: #000000; color: #fff; border-radius: 3px; }
+a.viewmore { display: block; right: 10px; bottom: 20px; position: absolute; padding: 3px 10px; background: rgba(25, 57, 149, 0.47); color: rgba(243, 255, 255, 0.98); border-radius: 3px; }
 .blogpic {float: left;width: 23.2%;margin-right: 20px;display: block;overflow: hidden;border-radius: 3px;position: relative;}
 .blogpic i { display: block; position: absolute; top: 0; left: 0; z-index: 9; font-style: normal; padding: 3px 5px; background: rgba(18,182,221,.8); font-size: 14px; }
 .blogpic i a { color: #FFF }
@@ -759,7 +759,7 @@ a.iconfont.icon-weixin {
 }
 
 .tool-box ul li a:hover {
-  color: #ca0c16;
+  color: #23d510;
   text-decoration: none;
 }
 

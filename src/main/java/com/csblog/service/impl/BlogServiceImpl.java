@@ -5,12 +5,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 import com.csblog.mapper.BlogMapper;
 import com.csblog.mapper.BlogTypeMapper;
 import com.csblog.model.Blog;
 import com.csblog.model.BlogType;
 import com.csblog.service.BlogService;
+import com.csblog.util.ConstantUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -170,7 +172,13 @@ public class BlogServiceImpl implements BlogService {
   @Override
   public List<Blog> selectGroupLikeBlogListByPage(Map<String, Object> map) {
     // TODO Auto-generated method stub
-    return blogMapper.selectGroupLikeBlogListByPage(map);
+      List<Blog> blogs = blogMapper.selectGroupLikeBlogListByPage(map);
+      blogs.stream().forEach(blog -> {
+          String introduction = blog.getIntroduction();
+          blog.setIntroduction(introduction.length() > ConstantUtil.Max_Blog_Size ?
+                  introduction.substring(0,ConstantUtil.Max_Blog_Size)+"..." : introduction);
+      });
+      return blogs;
   }
 
   @Override

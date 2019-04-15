@@ -30,7 +30,7 @@ a {
       <span class="navicon"></span>
     </h2>
     <div class="logo">
-      <a href="/">橘子博客 | <font class="font16">失败只有一种,那就是半途而废。</font></a>
+      <a href="${pageContext.request.contextPath}/">橘子博客 | <font class="font16">失败只有一种,那就是半途而废。</font></a>
     </div>
     <nav>
       <ul id="starlist">
