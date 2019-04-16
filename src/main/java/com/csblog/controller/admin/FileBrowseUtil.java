@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -22,29 +24,28 @@ public class FileBrowseUtil {
 	
 	/**
      * 获取服务器的所有图片
-     * @param req
-     * @param resp
-     * @param params 文件夹路径参数
-     * @return
-     * @throws ServletException
-     * @throws IOException
-     * @throws MalformedURLException
      */
     @RequestMapping("/getFileList")
     @ResponseBody
     protected Map<String, Object> CalculateGeoServlet() {
         ArrayList<String> fileList=new ArrayList<String>();
-        String params="c:\\upload\\background";
+        String params=ConstantUtil.UPLOAD_SERVER_PATH;
         fileList=getFiles(params,fileList);
+        List<String> newFileList = fileList.stream().map(e -> {
+            String path = ConstantUtil.READ_IMAGE_PATH;
+            String newPath = path + e.substring(e.lastIndexOf("/") + 1);
+            return newPath;
+        }).collect(Collectors.toList());
         Map<String, Object> map=new HashMap<String, Object>();
         if(fileList.size()>0){
         	map.put("status", 200);
         }else{
         	map.put("status", 0);
         }
-        map.put("fileList", fileList);
+        map.put("fileList", newFileList);
         return map;
     }
+
     /**
      * 通过递归得到某一路径下所有的目录及其文件
      * @param filePath 文件路径
@@ -54,25 +55,17 @@ public class FileBrowseUtil {
         ArrayList<String> fileListAll =fileList;
         File root = new File(filePath);
         File[] files = root.listFiles();
-        String[] arr=new String[10];
         if(files!=null){
           for (File file : files) {
             if (file.isDirectory()) {
-                arr=file.getAbsolutePath().split(":");
-                getFiles(arr[1].replace("\\","/"),fileListAll);
+                getFiles(file.getAbsolutePath().replace("\\","/"),fileListAll);
             } else {
-                arr=file.getAbsolutePath().split(":");
-                fileList.add(arr[1].replace("\\","/"));
+                fileList.add(file.getAbsolutePath().replace("\\","/"));
             }
            }
         }
         return fileListAll;
     }
 
-    //测试从服务器获取图片
-    public static void main(String[] args) {
-        ArrayList<String> fileList = new ArrayList<String>();
-        String params = "http://47.106.148.234:89/usr/local";
-        fileList = getFiles(params, fileList);
-    }
+
 }

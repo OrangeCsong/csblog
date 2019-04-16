@@ -71,7 +71,7 @@ public class BlogControllerAdmin {
             SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
             String newFileName = df.format(new Date());
             String fileNames = newFileName + new Random().nextInt(1000000) + "." + fileExt;
-            String filePath = "c:\\upload\\background\\" + fileNames;
+            String filePath = ConstantUtil.UPLOAD_SERVER_PATH + fileNames;
             File localFile = new File(filePath);
             if (!localFile.exists()) {
               localFile.mkdirs();
@@ -91,18 +91,17 @@ public class BlogControllerAdmin {
   /**
    * 删除封面图片
    *
-   * @param request
    * @return
    * @throws Exception
    */
   @RequestMapping(value = "/deletePic", method = RequestMethod.POST)
   @ResponseBody
   //@SystemLog(description = ConstantUtil.DELETE_IMAGES, userType = ConstantUtil.USERTYPE_ADMIN)
-  public Map<String, Object> deletePic(String prarm, HttpSession session,String path, HttpServletRequest request)
-      throws Exception {
+  public Map<String, Object> deletePic(String prarm,String path){
 	Map<String, Object> map = new HashMap<String, Object>();
-    String tempPath = path.replace("/", "\\");
-    File fileTemp = new File("c:\\" + tempPath);
+	//获取文件名
+      String delFileName = path.substring(path.lastIndexOf("/") + 1);
+    File fileTemp = new File(ConstantUtil.UPLOAD_SERVER_PATH+delFileName);
     if (fileTemp.exists()) {
       if (fileTemp.isFile()) {
         if (fileTemp.delete()) {
@@ -146,15 +145,15 @@ public class BlogControllerAdmin {
             SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
             String newFileName = df.format(new Date());
             String fileNames = newFileName + new Random().nextInt(1000000) + "." + fileExt;
-            String filePath = "c:\\upload\\blog\\" + newFileName + "\\" + fileNames;
+            String filePath = ConstantUtil.ARTICLE_IMAGE_PATH + newFileName + File.separator + fileNames;
             File localFile = new File(filePath);
             if (!localFile.exists()) {
               localFile.mkdirs();
             }
             file.transferTo(localFile);
-            fileNames = "/upload/blog/" + newFileName + "/" + fileNames;
+            fileNames =  newFileName + File.separator + fileNames;
             map.put("name", fileBaseName);
-            map.put("path", fileNames);
+            map.put("path", ConstantUtil.READ_ARTICLE_PATH + fileNames);
             map.put("status", 200);
           }
         }

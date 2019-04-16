@@ -1,11 +1,34 @@
 package com.csblog.util;
 
+import java.io.File;
+
 public class ConstantUtil {
 
     /**
      * 文章字数限制
      */
     public static final int Max_Blog_Size = 34;
+    /**
+     * 图片服务器路径[上传]
+     */
+    public static final String UPLOAD_SERVER_PATH = File.separator + "usr" + File.separator + "local" +
+            File.separator + "softhome" + File.separator + "nginx-1.8.0" + File.separator + "resource" + File.separator+"csblog"+File.separator;
+
+    /**
+     * 访问图片路径
+     */
+    public static final String READ_IMAGE_PATH = "http://47.106.148.234:89/csblog/";
+
+    /**
+     * 博客文章中引入的图片
+     */
+    public static final  String ARTICLE_IMAGE_PATH = File.separator + "usr" + File.separator + "local" +
+            File.separator + "softhome" + File.separator + "nginx-1.8.0" + File.separator + "resource" + File.separator + "blogarticle" + File.separator;
+    /**
+     * 访问图片路径
+     */
+    public static final String READ_ARTICLE_PATH = "http://47.106.148.234:89/blogarticle/";
+
 
     public static final String USERTYPE_ADMIN="管理员";
 	

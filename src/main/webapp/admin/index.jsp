@@ -82,14 +82,14 @@
 							</li>
 								
 							<li><a class="J_menuItem"
-								href="${pageContext.request.contextPath}/admin/blog/addBlog.jsp">写博客</a>
+								href="${pageContext.request.contextPath}/admin/blog/addBlog.jsp">书写博客</a>
 							</li>
 							
 							<li><a class="J_menuItem"
 								href="${pageContext.request.contextPath}/admin/blog/findBlog.jsp">查询博客</a>
 							</li>
 							<li><a class="J_menuItem"
-								href="${pageContext.request.contextPath}/admin/blog/blogType.jsp">类别</a>
+								href="${pageContext.request.contextPath}/admin/blog/blogType.jsp">博客分类</a>
 							</li>
 							
 
