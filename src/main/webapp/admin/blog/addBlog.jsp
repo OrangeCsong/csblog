@@ -196,7 +196,7 @@
 							<div class="newsview" style="padding-top:0px;">
 								<h3 class="news_title"></h3>
 								<div class="news_author">
-									<span class="au01">luotf</span>
+									<span class="au01">csblog</span>
 								</div>
 								<div class="tags"></div>
 								<div class="news_about">

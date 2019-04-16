@@ -141,8 +141,8 @@ background: linear-gradient(to top right, rgba(0,153,255,.9), rgba(42,228,197,.7
 .newslist li img { width: 100% }
 .newslist li { height: 22px; }
 .newslist li:hover { height: 100%; background: #f7f7f7 }
-.newslist li:hover a { color: #000; font-weight: bold }
-.newslist li:hover i { background: #222; }
+.newslist li:hover a { color: #57957a; font-weight: bold }
+.newslist li:hover i { background: #57957a; }
 .newslist li:nth-child(1) { height: 100%; background: #f7f7f7 }
 .newslist li:nth-child(1) a { color: #000; font-weight: bold }
 .newslist li:nth-child(1) i { background: #9a9a9a; }
@@ -150,8 +150,8 @@ background: linear-gradient(to top right, rgba(0,153,255,.9), rgba(42,228,197,.7
 .newslist:hover li:nth-child(1) a { color: #333; font-weight: normal }
 .newslist:hover li:nth-child(1) i { background: #9a9a9a; }
 .newslist:hover li:nth-child(1):hover { height: 100%; background: #f7f7f7; }
-.newslist:hover li:nth-child(1):hover a { color: #000; font-weight: bold }
-.newslist:hover li:nth-child(1):hover i { background: #222; }
+.newslist:hover li:nth-child(1):hover a { color: #57957a; font-weight: bold }
+.newslist:hover li:nth-child(1):hover i { background: #57957a; }
 .newslist p { line-height: 24px; font-size: 14px; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2; height: 48px; }
 .newspic { float: left; width: 32%; height: 218px; overflow: hidden; position: relative; }
 .newspic ul { overflow: hidden; }

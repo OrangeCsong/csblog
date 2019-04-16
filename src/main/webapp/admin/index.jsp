@@ -184,8 +184,7 @@
 			</div>
 			<div class="footer">
 				<div class="pull-right">
-					&copy; 2018 <a href="http://www.luotf.com/" target="_blank">luotf
-						blog</a>
+					&copy; 2018 <a href="${pageContext.request.contextPath}/csblog" target="_blank">csblog</a>
 				</div>
 			</div>
 		</div>

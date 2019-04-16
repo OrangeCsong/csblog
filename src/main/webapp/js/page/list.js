@@ -144,7 +144,7 @@ var globalCount = 0;
             + data[i].title
             + '</a></h3><span class="blogpic imgscale"><a href="find/' + id + '.html" title=""><img src="' + data[i].images + '"  /></a></span><p class="blogtext">'
             + data[i].introduction
-            + '</p><p class="bloginfo"><i class = "avatar"><img src="images/image_.jpg" border=0 width="30" height="30"></i><span>luotf</span><span><a href="javascript:void(0);">【'
+            + '</p><p class="bloginfo"><i class = "avatar"><img src="images/image_.jpg" border=0 width="30" height="30"></i><span>csblog</span><span><a href="javascript:void(0);">【'
             + keyword
             + '】</a></span><span class="m_time">'
             + Format(data[i].addtime, "yyyy-MM-dd")

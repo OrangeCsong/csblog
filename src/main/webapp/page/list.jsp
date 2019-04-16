@@ -7,8 +7,8 @@
 <title>列表页_个人博客 - 一个在Java道路上的技术员个人博客网站</title>
 <link rel="shortcut icon"
   href="${pageContext.request.contextPath}/images/favicon.ico">
-<meta name="keywords" content="个人博客,罗廷方个人博客,罗廷方" />
-<meta name="description" content="罗廷方个人博客，是一个在Java道路上的技术员个人博客网站" />
+<meta name="keywords" content="个人博客,csblog个人博客,csblog" />
+<meta name="description" content="csblog个人博客，是一个在Java道路上的技术员个人博客网站" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="${pageContext.request.contextPath}/css/style.css"
   rel="stylesheet">

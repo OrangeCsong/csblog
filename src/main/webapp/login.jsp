@@ -66,7 +66,7 @@
 			<div class="col-sm-5">
 				<form id="login" action="${pageContext.request.contextPath}/checkLogin" method="post">
 					<h3 class="no-margins">登录</h3>
-					<p class="m-t-md">登录访问 luotf 后台管理网站</p>
+					<p class="m-t-md">登录访问 csblog 后台管理网站</p>
 					<input type="text" id="username" name="username" class="form-control uname"
 						placeholder="用户名" /> <input type="password" name="password" id="password"
 						class="form-control pword m-b" placeholder="密码" />
@@ -78,7 +78,7 @@
 		</div>
 		<div class="signup-footer">
 			<div class="pull-left">
-				<strong>&copy; 2018 luotf blog</strong>
+				<strong>&copy; 2018 csblog</strong>
 			</div>
 		</div>
 	</div>

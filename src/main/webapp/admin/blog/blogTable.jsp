@@ -72,17 +72,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</table>
 						<div id="toolbar">
 							<button class="type btn btn-outline btn-primary" type="button"
-								id="typeButton" value="5">All</button>
+								 value="5">All</button>
 							<button class="type btn btn-outline btn-primary" type="button"
-								id="typeButton" value="-1">草稿</button>
+								 value="-1">草稿</button>
 							<button class="type btn btn-outline btn-info" type="button"
-								id="typeButton" value="1">发布</button>
+								 value="1">发布</button>
 							<button class="type btn btn-outline btn-danger" type="button"
-								id="typeButton" value="2">垃圾箱</button>
+								 value="2">垃圾箱</button>
 							<button class="type btn btn-outline btn-success" type="button"
-								id="typeButton" value="3">推荐</button>
+								 value="3">推荐</button>
 							<button class="type btn btn-outline btn-primary" type="button"
-								id="typeButton" value="4">置顶</button>
+								 value="4">置顶</button>
 							<div class="btn-group">
 								<button data-toggle="dropdown"
 									class="btn btn-outline btn-warning dropdown-toggle">
@@ -123,7 +123,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<div class="newsview" style="padding-top:0px;">
 									<h3 class="news_title"></h3>
 									<div class="news_author">
-										<span class="au01">罗廷方</span><span class="au02"></span><span
+										<span class="au01">csblog</span><span class="au02"></span><span
 											class="au03">共<b></b>人围观
 										</span>
 									</div>

@@ -162,7 +162,7 @@ var initBlogByAllTypeBlog = function() {
             newspic += "<li><a href=find/" + id + ".html target='_blank'><img src=" + data[type][i].images + "> <span>" + data[type][i].title + "</span></a></li>";
           }
           if (i >= 1) {
-            newslist += "<li><i></i><a href=find/" + id + ".html target='_blank'>" + data[type][i].title + "<p>" + data[type][i].introduction + "</p></a></li>";
+            newslist += "<li><i></i><a href=find/" + id + ".html target='_blank'>" + data[type][i].title + "</a></li>";
           }
         }
         newspic += "</ul></div>"

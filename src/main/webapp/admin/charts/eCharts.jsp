@@ -186,7 +186,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<div class="newsview" style="padding-top:0px;">
 									<h3 class="news_title"></h3>
 									<div class="news_author">
-										<span class="au01">罗廷方</span><span class="au02"></span><span
+										<span class="au01">csblog</span><span class="au02"></span><span
 											class="au03">共<b></b>人围观
 										</span>
 									</div>

@@ -238,11 +238,11 @@ var selectBlog = function() {
 					//从回收站还原
 					var c = '<a  class=" btn-sm btn-danger"  onclick="operation(' + row.id + ',\'还原\')"><i class="fa fa-share-square-o" ></i> 还原</a> ';
 					//取消推荐
-					var d = '<a  class=" btn-sm btn-primary"  onclick="operation(' + row.id + ',\'取推荐\')">取 推荐</a> ';
+					var d = '<a  class=" btn-sm btn-primary"  onclick="operation(' + row.id + ',\'取消推荐\')">取 推荐</a> ';
 					//从草稿还原
 					var e = '<a  class=" btn-sm btn-danger"  onclick="operation(' + row.id + ',\'发表\')"><i class="fa fa-share-square-o" ></i> 发表</a> ';
 					//取消置顶
-					var f = '<a  class=" btn-sm btn-success"  onclick="operation(' + row.id + ',\'取置顶\')">取 置顶</a> ';
+					var f = '<a  class=" btn-sm btn-success"  onclick="operation(' + row.id + ',\'取消置顶\')">取 置顶</a> ';
 					if (row.status == 2) {
 						return a + c;
 					} else if (row.status == 1) {
@@ -377,13 +377,13 @@ var operation = function(id, op) {
 	if (op == "还原") {
 		title = '确定要移出回收站吗';
 		text = '移出后,将显示在前台页面';
-	} else if (op == "取推荐") {
+	} else if (op == "取消推荐") {
 		title = '确定要取消推荐吗';
 		text = '取消推荐后,将不会显示在前台推荐栏目';
 	} else if (op == "发表") {
 		title = '确定要发表吗';
 		text = '发表后,将显示在前台页面';
-	} else if (op == "取置顶") {
+	} else if (op == "取消置顶") {
 		title = '确定要取消置顶吗';
 		text = '取消置顶后,将不会显示在前台置顶栏目';
 	}
@@ -398,11 +398,11 @@ var operation = function(id, op) {
 	}, function() {
 		if (op == "还原") {
 			operationBlog(id, 1, null, null)
-		} else if (op == "取推荐") {
+		} else if (op == "取消推荐") {
 			operationBlog(id, null, 0, null)
 		} else if (op == "发表") {
 			operationBlog(id, 1, null, null)
-		} else if (op == "取置顶") {
+		} else if (op == "取消置顶") {
 			operationBlog(id, null, null, 0)
 		}
 	});

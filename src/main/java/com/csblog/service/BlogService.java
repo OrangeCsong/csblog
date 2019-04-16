@@ -9,7 +9,6 @@ import java.util.Map;
 public interface BlogService {
 
 	/**
-	 * @author Luotf
 	 * @功能 根据id查询博客信息
 	 */
 	Blog selectBlogById(Integer id);
@@ -17,25 +16,21 @@ public interface BlogService {
 	Blog selectBlogUserById(Integer id);
 	
 	/**
-	 * @author Luotf
 	 * @功能 插入全部博客信息
 	 */
 	int insertBlog(Blog blog);
 
 	/**
-	 * @author Luotf
 	 * @功能 插入个别博客信息
 	 */
 	int insertBlogSelective(Blog blog);
 
 	/**
-	 * @author Luotf
 	 * @功能 根据id删除博客信息
 	 */
 	int deleteBlogById(Integer id);
 
 	/**
-	 * @author Luotf
 	 * @功能 根据blog来更新博客信息
 	 */
 	int updateBlogSelective(Blog blog);

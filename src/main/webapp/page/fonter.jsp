@@ -1,4 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <footer>
-  <p>Design by <a href="http://www.luotf.com">罗廷方个人网站</a> <a href="/">蜀ICP备18001827号-1</a></p>
+  <p><a href="http://47.106.148.234/csblog">"橘子松"博客</a> 反馈建议: orangecsong@163.com </p>
 </footer>
