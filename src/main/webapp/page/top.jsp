@@ -35,7 +35,11 @@ a {
     <nav>
       <ul id="starlist">
         <li><a href="${pageContext.request.contextPath}/index" title="首页" >网站首页</a></li>
-        <li><a href="${pageContext.request.contextPath}/list">技术博客</a></li>
+        <li class="menu"><a href="${pageContext.request.contextPath}/list">技术博客</a>
+          <ul class="timeline">
+              <li ><a href="#">时间轴</a></li>
+          </ul>
+        </li>
         <li class="menu"><a href="${pageContext.request.contextPath}/result?keyboard=type_1">技术专栏</a>
           <ul class="sub">
             <li></li>
@@ -44,7 +48,7 @@ a {
         <li><a href="${pageContext.request.contextPath}/find/13015.html">网站介绍</a></li>
         <li><a href="${pageContext.request.contextPath}/about">关于我</a></li>
         <li><a href="${pageContext.request.contextPath}/message">留言</a></li>
-        <li><a href="${pageContext.request.contextPath}/admin/">登录</a></li>
+        <li><a href="${pageContext.request.contextPath}/login/">登录</a></li>
       </ul>
     </nav>
      <div class="searchico"></div>

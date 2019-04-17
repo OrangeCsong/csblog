@@ -3,6 +3,8 @@ package com.csblog.service.impl;
 import com.csblog.mapper.BlogerMapper;
 import com.csblog.model.Bloger;
 import com.csblog.service.BlogerService;
+import com.csblog.util.CipherUtil;
+import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +14,7 @@ public class BlogerServiceImpl implements BlogerService {
 
 	@Autowired
 	private BlogerMapper blogerMapper;
-	
+
 	@Override
 	public int deleteByPrimaryKey(Integer id) {
 		// TODO Auto-generated method stub
@@ -55,4 +57,8 @@ public class BlogerServiceImpl implements BlogerService {
 		return blogerMapper.findUserByLoginName(name);
 	}
 
+    @Override
+    public Boolean validateLogin(String name, String pwd) {
+        return  blogerMapper.validateLogin(name, CipherUtil.generatePassword(pwd));
+    }
 }

@@ -34,35 +34,6 @@
 <body class="signin">
 	<div class="signinpanel">
 		<div class="row">
-			<div class="col-sm-7">
-				<div class="signin-info">
-					<div class="logopanel m-b">
-						<h1>[ xx.com ]</h1>
-					</div>
-					<div class="m-b"></div>
-					<h4>
-						欢迎进入 <strong> 后台管理网站</strong>
-					</h4>
-					<ul class="m-b">
-						<li><i class="fa fa-arrow-circle-o-right m-r-xs"></i>
-							权限分配、操作日志</li>
-						<li><i class="fa fa-arrow-circle-o-right m-r-xs"></i>
-							访客记录、IP剔除</li>
-						<li><i class="fa fa-arrow-circle-o-right m-r-xs"></i>
-							分页数据、动态图表</li>
-						<li><i class="fa fa-arrow-circle-o-right m-r-xs"></i> 所有操作都异步</li>
-						<li><i class="fa fa-arrow-circle-o-right m-r-xs"></i>
-							注：访问者无删除、修改操作</li>
-					</ul>
-					<div class=" tooltip-demo ">
-						<strong>还没有账号？ <a href="#" style="color:#3c3a39"
-							data-toggle="tooltip" data-placement="top" title="QQ:2822739876">联系站长&raquo;</a>
-							<a href="${pageContext.request.contextPath}/index.jsp"
-							style="color:#3c3a39;margin-left:15px;">首页&raquo;</a></strong>
-
-					</div>
-				</div>
-			</div>
 			<div class="col-sm-5">
 				<form id="login" action="${pageContext.request.contextPath}/checkLogin" method="post">
 					<h3 class="no-margins">登录</h3>
@@ -78,7 +49,7 @@
 		</div>
 		<div class="signup-footer">
 			<div class="pull-left">
-				<strong>&copy; 2018 csblog</strong>
+				<strong>&copy; 2018 csblog <span><a style="color: white; font-size: large"  href="/csblog">橘子松博客</a></span></strong>
 			</div>
 		</div>
 	</div>

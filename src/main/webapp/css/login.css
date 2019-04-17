@@ -5,7 +5,7 @@ html {
 body.signin {
   background: #18c8f6;
   height: auto;
-  background: url("../images/bg.jpg") no-repeat center fixed;
+  background: url("../images/login-background.jpg") no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

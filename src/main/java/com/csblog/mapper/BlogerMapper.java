@@ -2,6 +2,7 @@ package com.csblog.mapper;
 
 
 import com.csblog.model.Bloger;
+import org.apache.ibatis.annotations.Param;
 
 public interface BlogerMapper {
     
@@ -23,4 +24,6 @@ public interface BlogerMapper {
     int updateByPrimaryKey(Bloger record);
     
     Bloger findUserByLoginName(String name);
+
+    Boolean validateLogin(@Param("username") String username,@Param("password") String password);
 }

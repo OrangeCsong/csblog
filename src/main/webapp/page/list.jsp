@@ -81,7 +81,7 @@
       <div class="tuijian2  animated fadeIn whitebg">
         <h2 class="cloud_hometitle">推荐文章</h2>
         <ul class="tjpic animated fadeIn">
-          <i><img src="images/t03.jpg"></i>
+          <i><img src="${pageContext.request.contextPath}/images/t03.jpg"></i>
         </ul>
         <ul class="sidenews">
 

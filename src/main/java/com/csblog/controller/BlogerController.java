@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.csblog.annotation.SystemLog;
+import com.csblog.model.Bloger;
 import com.csblog.service.BlogerService;
 import com.csblog.util.CipherUtil;
 import com.csblog.util.ConstantUtil;
@@ -21,11 +22,10 @@ public class BlogerController {
 	
 	 /** 
      * 初始登陆界面 
-     * @param request 
-     * @return 
+     * @return
      */  
     @RequestMapping("/login")
-    public String tologin(HttpServletRequest request, HttpServletResponse response, Model model){  
+    public String tologin(){
     	return "login";
     }  
       
@@ -35,13 +35,13 @@ public class BlogerController {
      */  
     @RequestMapping("/checkLogin")
     public String login(String username, HttpSession session, String password, Model model){
-
-        //取得 密码，并用MD5加密
-        password = CipherUtil.generatePassword(password);
-        System.out.println(password+"密码为。。。。。。。。。。。。。。");
+        Boolean isLogin = blogerService.validateLogin(username, password);
+        if(! isLogin){
+            return "login";
+        }
+        session.setAttribute("user", blogerService.findUserByLoginName(username));
         return "admin/index";
     }
-    
     /** 
      * 退出 
      * @return 

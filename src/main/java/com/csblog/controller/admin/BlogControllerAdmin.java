@@ -20,7 +20,6 @@ import com.csblog.model.Bloger;
 import com.csblog.service.BlogService;
 import com.csblog.service.BlogerService;
 import com.csblog.util.ConstantUtil;
-import com.csblog.util.ResourceMapping;
 import com.csblog.util.subStringUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

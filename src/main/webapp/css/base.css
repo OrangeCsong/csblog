@@ -92,6 +92,32 @@ nav { float: left; height: 50px; line-height: 50px; text-align: center;    margi
 #starlist ul.sub li a { color: black }
 #starlist ul.sub li a:hover { color: #00c1de }
 #starlist li:hover ul.sub { display: block }
+
+#starlist ul.timeline {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background: white;
+    display: none;
+    z-index: 9
+}
+
+#starlist ul.timeline li {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    width: 90px;
+}
+
+#starlist ul.timeline li:last-child {
+    padding-bottom: 10px
+}
+
+#starlist ul.timeline li a {color: black}
+#starlist ul.timeline li a:hover {color: #00c1de}
+#starlist li:hover ul.timeline {display: block}
+
 /*箭头*/
 #starlist li.menu:before { position: absolute; content: ""; top: 22px; right: 5px; background: url(../images/jt.png) no-repeat; width: 8px; height: 8px; -ms-transition: all .5s ease; -moz-transition: all .5s ease; -webkit-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease; }
 #starlist li.menu:hover:before { transform: rotate(180deg) }/*旋转*/
