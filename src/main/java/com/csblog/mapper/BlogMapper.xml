@@ -501,4 +501,11 @@
 		SELECT 1;
 	</update>
 
+
+    <select id="listBlogForTimeAxis" resultMap="BaseResultMap">
+        select id , title , addTime
+        from t_blog
+        order by addTime
+    </select>
+
 </mapper>

@@ -102,4 +102,6 @@ public interface BlogMapper {
 
     
     int updateBlog(Blog record);
+
+    List<Blog> listBlogForTimeAxis();
 }

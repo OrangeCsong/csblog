@@ -60,6 +60,17 @@ public class Blog implements Serializable{
     /** 博客内容 */
     private String content;
 
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    /** 展示时间*/
+    private String time;
+
 	public Blog(Integer id, String title, String introduction, String keyword,
 			String images, Integer clicknum, Integer commentnum,
 			Integer agreenum, Integer istop, Integer isrecommend,

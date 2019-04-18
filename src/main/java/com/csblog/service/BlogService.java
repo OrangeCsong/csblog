@@ -109,4 +109,7 @@ public interface BlogService {
  	 * @return
  	 */
 	List<?>  selectBlogListByStatus();
+
+    List<Blog> listBlogForTimeAxis();
+
 }

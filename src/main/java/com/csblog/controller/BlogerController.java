@@ -37,6 +37,7 @@ public class BlogerController {
     public String login(String username, HttpSession session, String password, Model model){
         Boolean isLogin = blogerService.validateLogin(username, password);
         if(! isLogin){
+            model.addAttribute("error","用户名或密码错误");
             return "login";
         }
         session.setAttribute("user", blogerService.findUserByLoginName(username));

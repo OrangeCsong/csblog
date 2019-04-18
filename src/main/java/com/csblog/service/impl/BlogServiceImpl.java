@@ -187,7 +187,12 @@ public class BlogServiceImpl implements BlogService {
     return blogMapper.selectBlogListByStatus();
   }
 
-  @Override
+    @Override
+    public List<Blog> listBlogForTimeAxis() {
+        return blogMapper.listBlogForTimeAxis();
+    }
+
+    @Override
   public List<Blog> selectLikeBlogListByPageWithBlobs(Map<String, Object> map) {
     // TODO Auto-generated method stub
     return blogMapper.selectLikeBlogListByPageWithBlobs(map);

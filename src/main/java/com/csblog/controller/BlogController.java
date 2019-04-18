@@ -1,5 +1,6 @@
 package com.csblog.controller;
 
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -203,8 +204,6 @@ public class BlogController {
 		 return returnMap;
 	 }
 
-	 
-	 
 	 /**
       * 模糊组合分页查询博客信息(and)
       */
@@ -222,4 +221,21 @@ public class BlogController {
          returnMap.put("blogMap", blogMap);
          return returnMap;
      }
+    /**
+     * 时间轴,查询博客标题和发布时间
+     */
+    @RequestMapping("/timeaxis")
+    public String toTimeAxis(Model model){
+        List<Blog> blogs = blogService.listBlogForTimeAxis();
+        model.addAttribute("blogs",blogs);
+
+        blogs.stream().forEach(e -> {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+            String format = sdf.format(e.getAddtime());
+            e.setTime(format);
+        });
+
+
+        return "page/time";
+    }
 }

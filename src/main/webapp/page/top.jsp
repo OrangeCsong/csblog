@@ -37,7 +37,7 @@ a {
         <li><a href="${pageContext.request.contextPath}/index" title="首页" >网站首页</a></li>
         <li class="menu"><a href="${pageContext.request.contextPath}/list">技术博客</a>
           <ul class="timeline">
-              <li ><a href="#">时间轴</a></li>
+              <li ><a href="${pageContext.request.contextPath}/timeaxis">时间轴</a></li>
           </ul>
         </li>
         <li class="menu"><a href="${pageContext.request.contextPath}/result?keyboard=type_1">技术专栏</a>

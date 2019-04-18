@@ -103,12 +103,7 @@ nav { float: left; height: 50px; line-height: 50px; text-align: center;    margi
     z-index: 9
 }
 
-#starlist ul.timeline li {
-    height: 30px;
-    line-height: 30px;
-    font-size: 14px;
-    width: 90px;
-}
+#starlist ul.timeline li {height: 30px;line-height: 30px;font-size: 14px;width: 92px;}
 
 #starlist ul.timeline li:last-child {
     padding-bottom: 10px
