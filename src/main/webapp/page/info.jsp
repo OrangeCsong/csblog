@@ -26,7 +26,7 @@
     <div class="tool-box">
       <!-- 分享： -->
       <ul>
-        <li><a title="评论" style="" href="#news_pl"><i
+        <li><a title="抱歉,评论功能尚未上线"  href="javascript:void(0)"><i
             class="fa fa-commenting"></i><br>评论</a></li>
         <li><script type="text/javascript">
           (function() {

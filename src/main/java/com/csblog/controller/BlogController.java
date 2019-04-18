@@ -233,9 +233,8 @@ public class BlogController {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
             String format = sdf.format(e.getAddtime());
             e.setTime(format);
+            e.setId(Integer.valueOf(BlogIdSafeUtil.toJinzhi(8,e.getId())) * e.getId());
         });
-
-
         return "page/time";
     }
 }

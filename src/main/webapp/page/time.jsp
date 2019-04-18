@@ -22,7 +22,7 @@
   <div class="timebox">
     <ul>
         <c:forEach var="blog" items="${blogs}">
-            <li><span>${blog.time}</span><i><a href="/" target="_blank">${blog.title}</a></i></li>
+            <li><span>${blog.time}</span><i><a href="${pageContext.request.contextPath}/find/${blog.id}.html" target="_blank">${blog.title}</a></i></li>
         </c:forEach>
     </ul>
   </div>

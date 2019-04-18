@@ -50,7 +50,7 @@
 		</div>
 		<div class="signup-footer">
 			<div class="pull-left">
-				<strong>&copy; 2018 csblog <span><a style="color: white; font-size: large"  href="/csblog">橘子松博客</a></span></strong>
+				<strong>&copy; 2019 csblog <span><a style="color: white; font-size: large"  href="/csblog">橘子松博客</a></span></strong>
 			</div>
 		</div>
 	</div>
