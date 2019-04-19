@@ -75,7 +75,7 @@
 		    </div>
     </div>
   </article>
-
+<%@ include file="fonter.jsp" %>
     <!-- 全局js -->
   <%--   <script src="${pageContext.request.contextPath}/js/jquery.min.js?v=2.1.4"></script> --%>
 	<script src="${pageContext.request.contextPath}/js/page/resource.js"></script>

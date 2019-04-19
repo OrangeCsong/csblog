@@ -505,6 +505,7 @@
     <select id="listBlogForTimeAxis" resultMap="BaseResultMap">
         select id , title , addTime
         from t_blog
+        where status = 1
         order by addTime
     </select>
 

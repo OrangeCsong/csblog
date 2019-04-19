@@ -23,10 +23,37 @@
 .loader-inner>div {
   background-color: #907f819e
 }
+.navbar{
+    color: #555555;
+    line-height: 36px;
+    font-size: 14px;
+    margin-left: 80px;
+}
 </style>
+
+    <script>
+        window.onload = function () {
+            var index = 0;
+            var str = document.getElementById("content").innerHTML;
+            function type() {
+                document.getElementById("show").innerText = str.substring(0, index++);
+            }
+            setInterval(type, 180);
+        }
+    </script>
+
+
 </head>
 <body
   style="background:url(${pageContext.request.contextPath}/images/bj.png) repeat top left scroll;z-index:-2">
+<div class="navbar">
+    <div class="topbox">
+        <p class="welcome" id="content" style="display:none;">您好，欢迎您访问橘子松个人博客，我可爱的霸霸们 !（欢迎大家留下自己的脚气）^O^ *^_^* ╭(╯ε╰)╮ O(∩_∩)O</p>
+        <p id="show"></p>
+    </div>
+</div>
+
+
   <%@ include file="top.jsp"%>
   <article style="opacity:0">
     <div class="lbox ">
@@ -61,8 +88,8 @@
             title="【2019,我毕业了】回首大学四年"><img
               src="${pageContext.request.contextPath}/images/nav1.jpg"><span>【2019,我毕业了】<br> 回首大学四年 </span></a></li>
           <li><a href="find/19873.html"
-            title="【匆匆校园招聘季】总结校招经历的这几个月…"><img
-              src="${pageContext.request.contextPath}/images/nav2.jpg"><span>【匆匆校园招聘季】<br>总结校招经历的这几个月</span></a></li>
+            title="【想起个标题太难了】还没想好"><img
+              src="${pageContext.request.contextPath}/images/nav2.jpg"><span>【想起个标题太难了】<br>还没想好</span></a></li>
         </ul>
       </div>
 
@@ -109,15 +136,15 @@
         <p>家乡：江西省-抚州市</p>
         <p>Email：orangecsong@163.com</p>
         <ul class="linkmore">
-          <li><a href="47.106.148.234/csblog" target="_blank"
+          <li><a href="${pageContext.request.contextPath}/"
             class="iconfont icon-zhuye" title="网站主页"></a></li>
           <li><a
-            href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=-MTIxcrLz8jMyLyNjdKfk5E"
-            target="_blank" class="iconfont icon-youxiang" title="我的邮箱"></a></li>
+            href="javascript:void(0)"
+             class="iconfont icon-youxiang" title="我的邮箱"></a></li>
           <li><a
             href="http://wpa.qq.com/msgrd?v=3&uin=2822739876&site=qq&menu=yes"
             target="_blank" class="iconfont icon---" title="QQ联系我"></a></li>
-          <li id="weixin"><a href="javascript:void(0)" target="_blank"
+          <li id="weixin"><a href="javascript:void(0)"
             class="iconfont icon-weixin" title="关注我的微信"></a><i><img
               src="${pageContext.request.contextPath}/images/my_vx.jpg"></i></li>
         </ul>
@@ -158,14 +185,11 @@
 
       <div class="guanzhu gd whitebg animated fadeIn"
         style="display:none" id="follow-us">
-        <h2 class="cloud_hometitle">关注一下</h2>
+        <h2 class="cloud_hometitle">联系我</h2>
         <ul>
-          <li class="qq"><a href="javascript:void(0)"
-            target="_blank"><span>QQ号</span>2822739876</a></li>
-          <li class="email"><a href="javascript:void(0)"
-            target="_blank"><span>邮箱帐号</span>orangecsong@163.com</a></li>
-          <li class="wxgzh"><a href="javascript:void(0)"
-            target="_blank"><span>微信号</span>cs-fighting-WN</a></li>
+          <li class="qq"><a href="javascript:void(0)"><span>QQ号</span>2822739876</a></li>
+          <li class="email"><a href="javascript:void(0)"><span>邮箱帐号</span>orangecsong@163.com</a></li>
+          <li class="wxgzh"><a href="javascript:void(0)"><span>微信号</span>cs-fighting-WN</a></li>
         </ul>
       </div>
     </div>
@@ -177,5 +201,5 @@
   <script
     src="${pageContext.request.contextPath}/js/plugins/sweetalert/sweetalert.min.js"></script>
 </body>
-
+<%@ include file="fonter.jsp" %>
 </html>

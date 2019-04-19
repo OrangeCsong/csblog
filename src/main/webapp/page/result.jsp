@@ -92,19 +92,17 @@
       
       <div class="guanzhu gd whitebg " style="display:none"
         id="follow-us">
-        <h2 class="cloud_hometitle">关注一下</h2>
+        <h2 class="cloud_hometitle">联系我</h2>
         <ul>
-          <li class="qq"><a href="javascript:void(0)"
-            target="_blank"><span>QQ号</span>2822739876</a></li>
-          <li class="email"><a href="javascript:void(0)"
-            target="_blank"><span>邮箱帐号</span>2822739876@qq.com</a></li>
-          <li class="wxgzh"><a href="javascript:void(0)"
-            target="_blank"><span>微信号</span>cs-fighting-WN</a></li>
+          <li class="qq"><a href="javascript:void(0)"><span>QQ号</span>2822739876</a></li>
+          <li class="email"><a href="javascript:void(0)"><span>邮箱帐号</span>2822739876@qq.com</a></li>
+          <li class="wxgzh"><a href="javascript:void(0)"><span>微信号</span>cs-fighting-WN</a></li>
         </ul>
       </div>
     </div>
     <a href="#" class="top cd-top animated ">Top</a>
   </article>
+  <%@ include file="fonter.jsp" %>
   <script src="${pageContext.request.contextPath}/js/page/list.js"></script>
   <script src="${pageContext.request.contextPath}/js/layer/layer.js"></script>
 </body>

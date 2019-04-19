@@ -27,9 +27,8 @@ public class BlogerController {
     @RequestMapping("/login")
     public String tologin(){
     	return "login";
-    }  
-      
-    /** 
+    }
+    /**
      * 验证用户名和密码 
      * @return
      */  

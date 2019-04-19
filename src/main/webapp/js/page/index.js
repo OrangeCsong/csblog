@@ -360,7 +360,7 @@ var initAllLinks = function() {
       // 初始化数据
       $(".link").find("ul").html(linksAll);
       time = time + 0.1;
-      var msg = '<h5 style="animation-delay:' + time + 's" class="animated fadeIn" title="QQ:2822739876">注：添加友链,请点击&nbsp;&nbsp;&nbsp;<a class="applyLinks" onclick="applyLinks()" href="javascript:void(0);" style="font-size:13px;color:#f8ac59">申请友链</a></h5>';
+      var msg = '<h5 style="animation-delay:' + time + 's"  ><span style="font-weight: lighter;color: grey">加为友链,让更多人看见你的文章</span>&nbsp;&nbsp;&nbsp;<a class="applyLinks" onclick="applyLinks()" href="javascript:void(0);" style="font-size:13px;color:#f8ac59">申请友链</a></h5>';
       $(".msg").find("a").html(msg);
     },
     error : function() {
@@ -373,8 +373,8 @@ var initAllLinks = function() {
 
 var applyLinks = function() {
   swal({
-    title : '互换友链',
-    text : '注意：请在您的网站友链处添加本站链接后再行申请！！！！！！添加格式如下：名称&网站首页地址',
+    title : '交换友链',
+    text : '添加格式如下:名称&网站首页地址',
     type : 'input',
     showCancelButton : true,
     confirmButtonColor : "#1c84c6",

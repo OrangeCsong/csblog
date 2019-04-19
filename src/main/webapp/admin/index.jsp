@@ -299,7 +299,7 @@
 	//初始化未处理链接消息数
 	var initNoApplyLinksCount=function(){
 		$.ajax({
-			url : 'admin/selectNoApplyLinksCount',
+			url : 'selectNoApplyLinksCount',
 			type : 'post',
 			data:'',
 			dataType : 'json',

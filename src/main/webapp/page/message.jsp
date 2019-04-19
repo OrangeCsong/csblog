@@ -17,7 +17,7 @@
 		<div class="lbox">
 			<div class="newblogs ">
         <h2 class="hometitle"><span class="tagTitle"> </span>社区论坛</h2>
-                <h4>待开发中。。。sorry</h4>
+                <h4>尚未开发。。。sorry</h4>
 				</div>
 			</div>
 			<a class="top animated fadeIn" onclick="window.scrollTo(0,0)" style="display:none;z-index:0;font-size: 24px;position: fixed;bottom: 5%;right: 30%;color:#fff"><span style="padding: 6.5px 12px;background-color: #fff;color: #999;"><i class="fa fa-angle-up"></i></span></a>
@@ -30,6 +30,7 @@
 			</div>
 		</div>
 	</article>
+    <%@ include file="fonter.jsp" %>
 	<script src="${pageContext.request.contextPath}/js/page/message.js"></script>
 	<script src="${pageContext.request.contextPath}/js/layer/layer.js"></script>
 </body>

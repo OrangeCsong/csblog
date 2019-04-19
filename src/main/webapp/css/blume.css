@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+.links[_ngcontent-sc4] h3[_ngcontent-sc4] {
+    font-weight: normal;
+    color: #fff;
+}
+
+.flickr[_ngcontent-sc4] ul[_ngcontent-sc4] li[_ngcontent-sc4] {
+    margin: 0 11px 11px 0;
+    float: left;
+    background: #000;
+}
+
+.flickr[_ngcontent-sc4] ul[_ngcontent-sc4] li[_ngcontent-sc4] img[_ngcontent-sc4] {
+    width: 67px;
+    height: 67px;
+    border: #111 solid 1px;
+}
+
+.flickr[_ngcontent-sc4] ul[_ngcontent-sc4] li[_ngcontent-sc4] img[_ngcontent-sc4]:hover {
+    opacity: 0.2;
+}
+
+.footer-mid[_ngcontent-sc4] li[_ngcontent-sc4] {
+    line-height: 26px;
+}
+
+.footer-bottom[_ngcontent-sc4] a[_ngcontent-sc4] {
+    color: #2E7BB8;
+}
+
+.footer-bottom[_ngcontent-sc4] p[_ngcontent-sc4] {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.back-top[_ngcontent-sc5] {
+    font-size: 14px;
+    border-radius: 20px;
+    bottom: 50px;
+    list-style: none;
+    z-index: 10;
+    position: fixed;
+    right: 40px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    background-color: #1088e9;
+    display: none;
+}
+
+.back-top[_ngcontent-sc5] .back-top-inner[_ngcontent-sc5] {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    transition: font-size 0.5s;
+}
+
+.back-top[_ngcontent-sc5] .back-top-inner[_ngcontent-sc5]:hover {
+    font-size: 36px;
+    transition: font-size 0.5s;
+}
+
+@media screen and (min-width: 1024px) {
+    .container[_ngcontent-sc32] {
+        width: 900px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container[_ngcontent-sc32] {
+        width: 100%;
+        left: 48px;
+        right: 48px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 374px) {
+    .container[_ngcontent-sc32] {
+        left: 5px;
+        right: 5px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .container[_ngcontent-sc32] {
+        left: 5px;
+        right: 5px;
+    }
+}
+
+.container[_ngcontent-sc32] {
+    height: 450px;
+    margin: 60px auto;
+    position: relative;
+}
+
+.pic[_ngcontent-sc32] {
+    width: 160px;
+}
+
+.container[_ngcontent-sc32] img[_ngcontent-sc32] {
+    padding: 10px 10px 10px 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
+    z-index: 1;
+    position: absolute;
+    transition: all 0.5s ease-in;
+}
+
+.container[_ngcontent-sc32] img[_ngcontent-sc32]:hover {
+    z-index: 2;
+    box-shadow: 15px 15px 20px rgba(50, 50, 50, 0.4);
+    transform: rotate(0deg) scale(1.2);
+    -webkit-transform: rotate(0deg) scale(1.2);
+}
+
+.pic1[_ngcontent-sc32] {
+    left: 400px;
+    top: 0px;
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+}
+
+.pic2[_ngcontent-sc32] {
+    left: 200px;
+    top: 0px;
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+}
+
+.pic3[_ngcontent-sc32] {
+    right: 100px;
+    bottom: 100px;
+    transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+}
+
+.pic4[_ngcontent-sc32] {
+    top: 150px;
+    left: 300px;
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+}

@@ -145,8 +145,7 @@ public class VisitControllerAdmin {
 	 }
 	 
 	 /**
-	  * 
-	  * @param 
+	  * @param
 	  * @return
 	  * @throws Exception
 	  */

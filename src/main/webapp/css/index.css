@@ -1,4 +1,4 @@
-@charset "UTF-8";
+.guanzhu ul li:hover span@charset "UTF-8";
 
 /*图片展示*/
 
@@ -586,12 +586,12 @@ h3.blogtitle {
 }
 
 .guanzhu ul li:hover span {
-    width: 120px;
+    width: 107px;
 }
 
 .gd {
     width: 243px;
-    top: 100px;
+    top: 320px;
     z-index: 999;
     position: fixed;
     _position: absolute;

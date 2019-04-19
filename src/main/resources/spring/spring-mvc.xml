@@ -30,10 +30,12 @@
         <bean class="com.csblog.interceptor.AccessInterceptor"></bean>
 
         <mvc:interceptor>
-            <mvc:mapping path="/admin"/>
+            <mvc:mapping path="/**"/>
             <!-- 需排除拦截的地址 -->
-            <!--  <mvc:exclude-mapping path="/userController/login"/>  -->
-            <bean id="loginInterceptor" class="com.csblog.interceptor.LoginInterceptor"></bean> <!--这个类就是我们自定义的Interceptor -->
+            <mvc:exclude-mapping path="/js/**"/>
+            <mvc:exclude-mapping path="/css/**"/>
+            <mvc:exclude-mapping path="/images/**"/>
+            <bean id="loginInterceptor" class="com.csblog.interceptor.LoginInterceptor"></bean>
         </mvc:interceptor>
 
     </mvc:interceptors> 

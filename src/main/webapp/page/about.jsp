@@ -9,6 +9,7 @@
     <link href="${pageContext.request.contextPath}/css/base.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/css/aboutv2.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/css/m.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/blume.css" rel="stylesheet">
 <script src="${pageContext.request.contextPath}/js/jquery.min.js" ></script>
 <script src="${pageContext.request.contextPath}/js/ab.js"></script>
 <!--[if lt IE 9]>
@@ -52,7 +53,9 @@
         </figcaption>
         </a></li>
       <li>
-        <p class="text_b"><a href="javascript:void(0)">死亡并不可怕，可怕的是，你辜负了所有人的眼泪，辜负了自己直到生命结束也未曾达到的高度，还有那未曾完成的梦想。</a></p>
+        <p class="text_b"><a href="javascript:void(0)">
+            青春的遗憾在于,没有去想去的远方,没敢爱想爱的人,没有拼命做想做的事,在最该奋斗的日子，选择了现世安稳。
+        </a></p>
       </li>
       <li><a href="javascript:void(0)"><img src="${pageContext.request.contextPath}/images/jxnu4.jpeg">
         <figcaption>
@@ -68,7 +71,7 @@
   <div class="navlist">
     <ul>
       <li class="navcurrent"><a href="#top1">基本信息</a> </li>
-      <li> <a href="#top2" >工作技能</a> </li>
+      <li> <a href="#top2" >相册集锦</a> </li>
       <li> <a href="#top3" >内心独白</a> </li>
       <li> <a href="#top4" >自带BGM</a> </li>
       <li> <a href="#top5" >博主帅照</a> </li>
@@ -87,13 +90,31 @@
     </div>
     <div class="navitem" name = "top2">
       <div class="content">
-        <p class="ab_t">工作技能：</p>
-        <p>1、熟悉JAVA面向对象、集合、并发编程相关知识</p>
-          <p>1、熟悉AJAX技术相关知识及使用场景进行前台后数据传输</p>
-        <p>2、根据产品需求，配合后端开发人员协作实现前端页面效果和功能</p>
-        <p>3、能够进行手机端和Pc端Html页面制作</p>
-        <p>4、熟练使用html5，CSS3，javascript，熟悉页面架构和布局</p>
-        <p>5、熟练使用Javascript框架</p>
+        <p class="ab_t">相册集锦：</p>
+
+
+          <app-root _nghost-sc0="" ng-version="6.1.3">
+              <app-layout _nghost-sc1=""><!---->
+                  <app-body _ngcontent-sc1="" _nghost-sc3="">
+                      <div _ngcontent-sc3="" class="mainbody">
+                          <div _ngcontent-sc3="" class="blogs">
+                              <router-outlet _ngcontent-sc3=""></router-outlet>
+                              <app-album _nghost-sc32="">
+                                  <div _ngcontent-sc32="" class="container"><!---->
+                                      <img _ngcontent-sc32="" class="pic pic0" classname="pic pic0" src="${pageContext.request.contextPath}/images/me3.jpg">
+                                      <img _ngcontent-sc32="" class="pic pic1" classname="pic pic1" src="${pageContext.request.contextPath}/images/me4.jpg">
+                                      <img _ngcontent-sc32="" class="pic pic2" classname="pic pic2" src="${pageContext.request.contextPath}/images/me2.jpg">
+                                      <img _ngcontent-sc32="" class="pic pic3" classname="pic pic3" src="${pageContext.request.contextPath}/images/me5.jpg">
+                                      <img _ngcontent-sc32="" class="pic pic4" classname="pic pic4" src="${pageContext.request.contextPath}/images/me1.jpg">
+                                  </div>
+                              </app-album>
+                          </div>
+                      </div>
+                  </app-body>
+              </app-layout>
+          </app-root>
+
+
       </div>
     </div>
     <div class="navitem" name = "top3">
