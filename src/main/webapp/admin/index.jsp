@@ -304,6 +304,9 @@
 			data:'',
 			dataType : 'json',
 			success : function(data) {
+			    if(data == "99"){
+                    window.location.href = "${pageContext.request.contextPath}/login";
+                }
 				var count='';
 				var isApplyLinks='';
 				if(data.status==200){

@@ -26,6 +26,8 @@ public class LoginInterceptor implements HandlerInterceptor {
         if(urlString.contains("admin") && user == null){
             //后台地址 判断有没有登录
             System.out.println("经过这里了吗");
+            //返回ajax一个标识
+            response.getWriter().write("99");
            return false;
         }
        return true;
