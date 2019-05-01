@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="baidu-site-verification" content="Eg9tVrHSEK" />
-<title>首页:一个在Java道路上的爬行的码农</title>
+<title>首页</title>
 <link rel="shortcut icon"
   href="${pageContext.request.contextPath}/images/favicon.ico">
 <meta name="keywords" content="个人博客,陈松个人博客,陈松" />
@@ -61,16 +61,16 @@
         <div class="banner">
           <div id="banner" class="fader">
             <li class="slide" style=" "><a
-              href="javascript:void(0)" target="_blank"><img
+              href="javascript:void(0)" ><img
                 src="${pageContext.request.contextPath}/images/q1.jpg"></a></li>
 
             <li class="slide" style=" "><a
               href="javascript:void(0)"
-              target="_blank"><img
+              ><img
                 src="${pageContext.request.contextPath}/images/q2.jpg"></a></li>
 
             <li class="slide" style=""><a
-              href="javascript:void(0)" target="_blank"><img
+              href="javascript:void(0)" ><img
                 src="${pageContext.request.contextPath}/images/q3.jpg"></a></li>
             <div class="fader_controls">
               <div class="pic_page prev" data-target="prev"></div>

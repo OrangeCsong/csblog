@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>列表页_个人博客 - 一个在Java道路上的技术员个人博客网站</title>
+<title>列表页</title>
 <link rel="shortcut icon"
   href="${pageContext.request.contextPath}/images/favicon.ico">
 <meta name="keywords" content="个人博客,csblog个人博客,csblog" />

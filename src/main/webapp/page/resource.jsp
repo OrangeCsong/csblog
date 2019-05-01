@@ -4,11 +4,10 @@
 <html>
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>资源页_个人博客 - 一个在Java道路上的技术员个人博客网站</title>
+    <title>资源页</title>
  <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/favicon.ico"> 
 <meta name="keywords" content="个人博客,csblog个人博客,csblog" />
 <meta name="description" content="csblog个人博客，是一个在Java道路上的技术员个人博客网站" />
@@ -66,9 +65,7 @@
       </div>
      		<div class="tuijian2 whitebg" >
 		      <h2 class="cloud_hometitle">推荐文章</h2>
-		      <ul class="tjpic animated fadeInDown" >
-		        <i><img src="${pageContext.request.contextPath}/images/t03.jpg"></i>
-		      </ul>
+
 		      <ul class="sidenews">
 		       
 		      </ul>
